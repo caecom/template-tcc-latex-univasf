@@ -1,0 +1,253 @@
+%--------------------------------------------------------------------------------
+% Constrói a capa com base na seção de identificação do main.tex
+%--------------------------------------------------------------------------------
+\begin{capa}
+\center
+	\includegraphics[scale=0.6]{img/univasf.jpg}
+
+	{\ABNTEXchapterfont\bfseries\large\imprimirinstituicao}
+
+	\vspace*{5cm}
+	{\ABNTEXchapterfont\bfseries\large\imprimirautor}
+
+	\vfill
+	{\ABNTEXchapterfont\bfseries\large\imprimirtitulo}
+	\vfill
+	\ABNTEXchapterfont\bfseries\large\imprimirlocal\\ \the\year
+
+	\vspace*{1cm}
+
+\end{capa}
+%--------------------------------------------------------------------------------
+% Constrói a folha de rosto com base na seção de identificação do main.tex
+%--------------------------------------------------------------------------------
+\begin{folhaderosto}
+\center
+		{\ABNTEXchapterfont\bfseries\large\imprimirautor}
+		\vspace*{\fill}
+
+		{\ABNTEXchapterfont\bfseries\large\imprimirtitulo}
+		\vspace*{\fill}
+
+		{\hspace{.45\textwidth}
+		\begin{minipage}{.5\textwidth}
+			\SingleSpacing
+			\imprimirpreambulo \\ \\
+
+			{\imprimirorientadorRotulo~\imprimirorientador\par}
+			{\imprimircoorientadorRotulo~\imprimircoorientador\par}
+
+		\end{minipage}%
+		\vspace*{\fill}}%
+		\vspace*{\fill}
+			\ABNTEXchapterfont\bfseries\large\imprimirlocal\\ \the\year
+		\vspace*{1cm}
+\end{folhaderosto}
+
+%--------------------------------------------------------------------------------
+% Constrói a ficha catalográfia com base na seção de identificação do main.tex
+% Está comentado porque no final das contas a biblioteca do seu campus que gera a 
+% numeração, você pode adicionar os numeros aqui, ou anexar o pdf gerado por eles
+% ao documento.
+%--------------------------------------------------------------------------------
+%\begin{fichacatalografica}
+%	\vspace*{\fill}					% Posição vertical
+%	\hrule							% Linha horizontal
+%	\begin{center}					% Minipage Centralizado
+%	\begin{minipage}[c]{12.5cm}		% Largura
+%
+%	\imprimirautor
+%
+%	\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
+%	\imprimirlocal, \the\year-
+%
+%	\hspace{0.5cm} xx p. : il. (algumas color.) ; 30 cm.\\
+%
+%	\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
+%
+%	\hspace{0.5cm}
+%	\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
+%	\the\year.}\\
+%
+%	\hspace{0.5cm}
+%		1. Palavra-chave1.
+%		2. Palavra-chave2.
+%		I. Orientador.
+%		II. Universidade xxx.
+%		III. Faculdade de xxx.
+%		IV. Título\\
+%
+%	\hspace{8.75cm} CDU 02:141:005.7\\
+%
+%	\end{minipage}
+%	\end{center}
+%	\hrule
+%\end{fichacatalografica}
+
+%--------------------------------------------------------------------------------
+% Anexando a ficha catalogáfica e a folha de aprovação 
+%--------------------------------------------------------------------------------
+\includepdf[pages=-]{anexos/ficha.pdf}
+
+\includepdf[pages=-]{anexos/aprovacao.pdf}
+
+\setlength{\ABNTEXsignwidth}{12cm}
+
+%--------------------------------------------------------------------------------
+% Está comentado pelo mesmo motivo da ficha catalográfica 
+%--------------------------------------------------------------------------------
+%\begin{folhadeaprovacao}
+%	\begin{center}
+%	    {\ABNTEXchapterfont\bfseries\large\imprimirinstituicao}
+%	    \vspace*{\fill}
+%
+%	    {\ABNTEXchapterfont\bfseries\large FOLHA DE APROVAÇÃO}
+%	    \vspace*{\fill}
+%
+%	    {\ABNTEXchapterfont\bfseries\large\imprimirautor}
+%
+%	    \vspace*{\fill}\vspace*{\fill}
+%	    {\ABNTEXchapterfont\bfseries\large\imprimirtitulo}
+%	    \vspace*{\fill}
+%
+%	    {\hspace{.45\textwidth}
+%		\begin{minipage}{.5\textwidth}
+%			\SingleSpacing
+%			\ABNTEXchapterfont\imprimirpreambulo \\ \\
+%
+%			{\ABNTEXchapterfont\imprimirorientadorRotulo~\imprimirorientador\par}
+%			{\ABNTEXchapterfont\imprimircoorientadorRotulo~\imprimircoorientador\par}
+%
+%		\end{minipage}%
+%	    \vspace*{\fill}}
+%	\end{center}
+%
+%	\vspace*{\fill}	
+%	
+%	\begin{center}
+%			 \ABNTEXchapterfont\large Aprovado em: \_\_\_\_ de \_\_\_\_ de 2017
+%	\end{center}
+
+%	\vspace*{\fill}
+	
+%	\begin{center}
+%			 \ABNTEXchapterfont\bfseries\large Banca Examinadora
+%	\end{center}
+%		
+%   \ABNTEXchapterfont\assinatura{Fábio Nelson de Sousa Pereira, Mestre, Universidade Federal do Vale do São Francisco}
+%	\ABNTEXchapterfont\assinatura{Jorge Luis Cavalcanti Ramos, Doutor, Universidade Federal do vale do São Francisco}
+%  \ABNTEXchapterfont\assinatura{Ricardo Argenton Ramos, Doutor, Universidade Federal do Vale do São Francisco}
+%	 \vspace*{\fill}
+
+	 
+%\end{folhadeaprovacao}
+
+%--------------------------------------------------------------------------------
+% Insere a epígrafe
+%--------------------------------------------------------------------------------
+\newpage
+\vspace*{\fill}
+\begin{flushright}
+		\textit{Lorem Ipsum...}
+\end{flushright}
+
+%--------------------------------------------------------------------------------
+% Seção de agradecimentos
+%--------------------------------------------------------------------------------
+\begin{agradecimentos}
+	
+\lipsum[2-4]
+
+\end{agradecimentos}
+
+%--------------------------------------------------------------------------------
+% Insere a segunda epígrafe
+%--------------------------------------------------------------------------------
+\begin{epigrafe}
+    \vspace*{\fill}
+	\begin{flushright}
+		Se pude enxergar a tão grande distância, foi subindo nos ombros de gigantes.\\
+		 \vspace{\baselineskip}
+		\textbf{Isaac Newton}\\
+		\textbf{Carta à Robert Hooke, 1676}
+	\end{flushright}
+\end{epigrafe}
+
+
+
+%--------------------------------------------------------------------------------
+% Seção de resumos
+%--------------------------------------------------------------------------------
+% resumo em português
+\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
+\begin{resumo}
+
+\lipsum[1-2]
+
+ \textbf{Palavras-chave}: \textit{Palavra em inglês 1, Palavra em inglês 2, Palavra em inglês 3, Palavra em inglês 4}, Palavra 5.
+
+\end{resumo}
+
+%---------------------------------------------------------------------------------
+% resumo em inglês
+\begin{resumo}[Abstract]
+\begin{otherlanguage*}{english}
+
+\lipsum[3-4]
+	
+	\vspace{\onelineskip}
+
+	\noindent
+	\textbf{Key-words}: \textit{Palavra em inglês 1, Palavra em inglês 2, Palavra em inglês 3, Palavra em inglês 4, Palavra em inglês 4}.
+
+\end{otherlanguage*}
+\end{resumo}
+
+
+%---------------------------------------------------------------------------------
+% Insere lista de ilustrações
+%---------------------------------------------------------------------------------
+\begin{KeepFromToc} % Este comando evita que todas as seções dentro dele de apareçam no sumário
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures
+%\addcontentsline{toc}{chapter}{Lista de Figuras}
+\cleardoublepage
+
+
+%---------------------------------------------------------------------------------
+% Insere lista de tabelas
+%---------------------------------------------------------------------------------
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables
+\cleardoublepage
+
+%---------------------------------------------------------------------------------
+% Ajusta lista de código - alterar de figures para códigos - by @Gabrielr2508
+%---------------------------------------------------------------------------------
+\makeatletter
+\let\l@listing\l@figure
+\def\newfloat@listoflisting@hook{\let\figurename\listingname}
+\makeatother
+
+%---------------------------------------------------------------------------------
+% Insere lista de códigos - by @leolleocomp
+%---------------------------------------------------------------------------------
+\listoflistings
+
+\end{KeepFromToc}
+
+%---------------------------------------------------------------------------------
+% Insere lista de abreviaturas e siglas
+%---------------------------------------------------------------------------------
+\begin{siglas}
+	\item[LI]       Lorem Ipsum
+    \item[LII]		Lorem Ipsum Ipsum
+	    
+\end{siglas}
+
+%---------------------------------------------------------------------------------
+% Insere o sumario
+%---------------------------------------------------------------------------------
+\pdfbookmark[0]{\contentsname}{toc} 
+\tableofcontents*
+\cleardoublepage
