@@ -2,18 +2,72 @@
 
 
 
-\section{Seção de exemplo 1} \label{sec:resex1}
+\section{Seção de exemplo 1 - Códigos} \label{sec:resex1}
 
-\subsection{Subseção de exemplo 1 - Inserindo trechos de códigos} 
+\subsection{Subseção de exemplo 1 - Inserindo trechos de códigos}
+ 
+O nosso querido Leonardo Cavalcante providenciou um comando que deixa nossos trechos de códigos bonitinhos e gera um elemento pré-textual de Lista de Códigos. 
 
+Os códigos são adicionados através do comando seguinte:
+
+\textbackslash sourcecode\{ Descrição \}\{Label\}\{Linguagem\}\{Arquivo com extensão\}
+
+Um exemplo pode ser visto no código \ref{cmd:cron} abaixo.
 
 \sourcecode{Configuração do intervalo de execução no Script Agendador}{cron}{javascript}{cron.js}
 
 
+\section{Seção de exemplo 2 - Listas} \label{sec:resex2}
 
 \subsection{Subseção de exemplo 2 - Lista de itens} 
 
-\subsubsection{Subsubseção de exemplo 1 - Lista sem numeração}
+Existem alguns tipos de listas no Latex, iremos exemplificar a lista sem numeração (seção \ref{subsubsec:itemize}), a lista enumerada (seção \ref{subsubsec:enumerate}) e a lista mista (seção \ref{subsubsec:mista}). As listas podem ser encadeadas de diversas maneiras,
+de acordo com a necessidade do autor.
+
+\subsubsection{Subsubseção de exemplo 1 - Lista sem numeração} \label{subsubsec:itemize}
+
+Este é um exemplo de lista sem numeração.
+
+\begin{itemize}
+	\item \textbf{Cadastrar usuário}
+
+		\begin{itemize}
+    		\item Atores
+		    	\begin{itemize}
+    		    	\item Usuário
+		    	\end{itemize}
+
+	    	\item Fluxo de eventos primário
+			    \begin{itemize}
+	    		    \item o usuário deve se cadastrar informando seu nome, \textit{e-mail} e senha;
+		        	\item a API armazena os dados do usuário;
+		    	    \item o usuário é liberado para realizar o \textit{login}.
+			    \end{itemize}
+
+    		\item Fluxo alternativo
+			    \begin{itemize}
+		    	   \item o usuário desiste de se cadastrar e cancela o caso de uso clicando no botão voltar.
+	    		\end{itemize}
+
+		\end{itemize}
+	
+\end{itemize}
+
+\subsubsection{Subsubseção de exemplo 2 - Lista enumerada} \label{subsubsec:enumerate}
+
+Este é um exemplo de lista enumerada.
+
+\begin{enumerate}
+	\item O Usuário deseja ver o histórico das variáveis climáticas, então através da interface de usuário escolhe o período ao qual o histórico se refere;
+	\item A aplicação solicita à API através de uma requisição HTTP contendo o momento de início e o momento do fim do período em seus parâmetros;     			\item A API recebe a solicitação e se comunica com a base de dados, então requere as informações quem possuem a data de leitura no intervalo escolhido;
+	\item A base de dados retorna os dados em formato Json para a API;
+	\item A API responde à requisição retornando os dados, também em formato Json, para a aplicação cliente;
+	\item A aplicação cliente renderiza os gráficos utilizando o conjunto de dados obtidos.
+\end{enumerate}
+
+\subsubsection{Subsubseção de exemplo 3 - Lista mista} \label{subsubsec:mista}
+
+Este é um exemplo de lista mista.
 
 \begin{itemize}
 	\item \textbf{Cadastrar usuário}
@@ -103,15 +157,3 @@
 			    \end{enumerate}
 		\end{itemize}
 \end{itemize}
-
-
-\subsubsection{Subsubseção de exemplo 2 - Lista enumerada}
-
-
-\begin{enumerate}
-	\item O Usuário deseja ver o histórico das variáveis climáticas, então através da interface de usuário escolhe o período ao qual o histórico se refere;
-	\item A aplicação solicita à API através de uma requisição HTTP contendo o momento de início e o momento do fim do período em seus parâmetros;     			\item A API recebe a solicitação e se comunica com a base de dados, então requere as informações quem possuem a data de leitura no intervalo escolhido;
-	\item A base de dados retorna os dados em formato Json para a API;
-	\item A API responde à requisição retornando os dados, também em formato Json, para a aplicação cliente;
-	\item A aplicação cliente renderiza os gráficos utilizando o conjunto de dados obtidos.
-\end{enumerate}
