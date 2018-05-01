@@ -6,4 +6,5 @@
 /_minted-main
 main.*
 !main.pdf
+!main.tex
 .DS_Store

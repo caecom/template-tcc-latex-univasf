@@ -1,0 +1,79 @@
+\documentclass[
+	12pt,				% tamanho da fonte
+	openany,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	oneside, 			% oneside - twoside
+	a4paper,			% tamanho do papel.
+	chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	sumario=tradicional,	
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	english,			% idioma adicional para hifenização
+	brazil,				% o último idioma é o principal do documento
+	]{abntex2}
+
+% ---------------------------------------------------------------------------
+% Inclui os comandos do projeto
+% ---------------------------------------------------------------------------
+\input{tex/commands}
+
+% ---------------------------------------------------------------------------
+% IDENTIFICAÇÃO
+% ---------------------------------------------------------------------------
+\titulo{ISSO AQUI DEU MUITO TRABALHO PARA SER FEITO}
+\autor{FULANO DA SILVA}
+\local{JUAZEIRO - BA}
+\orientador{Prof. M. Sc. Ciclano Fulano de Tal}
+%\coorientador{M. Sc. Osvaldo Campelo de Mello Vasconselos}
+\instituicao{
+UNIVERSIDADE FEDERAL DO VALE DO SÃO FRANCISCO
+	\par
+CURSO DE GRADUAÇÃO EM ENGENHARIA DE COMPUTAÇÃO}
+\tipotrabalho{Trabalho de Conclusão de Curso}
+\preambulo{Trabalho apresentado à Universidade Federal do Vale do São Francisco - Univasf, Campus Juazeiro, como requisito da obtenção do título de Bacharel em Engenharia de Computação.}
+
+
+% -----------------------------------------------------------------------------
+% CONFIGURACAO DO SUMARIO - by @Gabrielr2508
+% Precisa estar aqui, por isso não foi para o commands.tex, não descobrimos o motivo, %caso saiba, faça um pull request! :D
+% -----------------------------------------------------------------------------
+% Secao primaria (Chapter) Caixa alta, Negrito, tamanho 12
+\makeatletter
+\renewcommand*{\l@chapter}[2]{%
+  \l@chapapp{\uppercase{#1}}{#2}{\cftchaptername}}
+\makeatother
+% Secao secundaria (Section) Caixa baixa, Negrito, tamanho 12
+\renewcommand{\cftsectionfont}{\uppercase} %ponha \rmfamily se quiser serifadas...
+
+% Secao terciaria (Subsection) Caixa baixa, negrito, tamanho 12
+\renewcommand{\cftsubsectionfont}{\bfseries}
+
+% Secao quaternaria (Subsubsection) Caixa baixa, tamanho 12
+\renewcommand{\cftsubsubsectionfont}{\normalfont}
+
+% Seção quinaria (subsubsubsection) Caixa baixa, sem negrito, tamanho 12
+\renewcommand{\cftparagraphfont}{\normalfont\itshape}
+
+% -----------------------------------------------------------------------------
+% Início do TCC 
+% -----------------------------------------------------------------------------
+\begin{document}
+
+	\frenchspacing % Retira espaço extra obsoleto entre as frases.
+	
+	\pretextual
+		\input{tex/pretextual}
+
+	\textual
+		\pagestyle{simple}
+		\input{tex/introducao}
+		\input{tex/desenvolvimento}
+		\input{tex/metodos}
+		\input{tex/resultados}
+		\input{tex/conclusao}
+
+	\postextual
+		\bibliography{tex/references}
+		\input{tex/anexos}
+
+\end{document}
