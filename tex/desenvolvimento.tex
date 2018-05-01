@@ -1,0 +1,88 @@
+%--------------------------------------------------------------------------------------
+% Este arquivo contém a sua funtamentação teórica
+%--------------------------------------------------------------------------------------
+\chapter{Referencial teórico}
+
+\section{Seção de exemplo 1 - Como fazer citações}
+
+\lipsum[1-20]
+
+
+\section{Seção de exemplo 2 - Como inserir figuras}
+
+
+
+%--------------------------------------------------------------------------------------
+% Esse é um exemplo de figura composta de outras subfiguras
+%--------------------------------------------------------------------------------------
+\begin{figure}[!htb]
+\centering
+    \caption{\label{img:figura1} Exemplo de figura composta}
+    \subcaptionbox{\label{img:subfigura1} Subfigura 1}{\includegraphics[scale=.1]{img/placeholder}}\qquad
+    \subcaptionbox{\label{img:subfigura2} Subfigura 2}{\includegraphics[scale=.1]{img/placeholder}}
+    \legend{\textbf{Fonte:} \citeonline{SUA-REFERENCIA}}
+\label{fig:dag}
+\end{figure}
+
+%\begin{figure}[!htb]
+%\centering
+%    \caption{\label{img:telas} Telas da aplicação cliente}
+%    \subcaptionbox{\label{img:inicial} Abertura}{\includegraphics[scale=.12]{img/APP/inicial}}\qquad
+%    \subcaptionbox{\label{img:login} \textit{Login}}{\includegraphics[scale=.12]{img/APP/login}}\qquad
+%    \subcaptionbox{\label{img:cadastro} Cadastro}{\includegraphics[scale=.12]{img/APP/cadastro}}\qquad
+%    \subcaptionbox{\label{img:hist-rel}Sobre}{\includegraphics[scale=.12]{img/APP/sobre}}\\
+%    \vspace{1.5em}
+%    \subcaptionbox{\label{img:dados_atuais}Dados atuais}{\includegraphics[scale=.15]{img/APP/atual}}\qquad
+%    \subcaptionbox{\label{img:hist-time}Seleção de período}{\includegraphics[scale=.15]{img/APP/periodo}}\qquad
+%    \subcaptionbox{\label{img:hist-rel}Exibir histórico}{\includegraphics[scale=.15]{img/APP/historico}}\\
+%    \vspace{2.5em}
+%    \legend{\textbf{Fonte:} O Autor}
+%\label{fig:dag}
+%\end{figure}
+
+%--------------------------------------------------------------------------------------
+% Esse é um exemplo de figura simples
+%--------------------------------------------------------------------------------------
+\imagem{0.25}{placeholder}{Uma figura simples}{O autor}
+
+
+\newpage % Quebra a página
+
+Para referenciar uma imagem deve ser usada a tag REF, como exemplo, estamos referenciando a figura \ref{img:placeholder}. Isso vale tanto para figuras simples quanto para as compostas, como por exemplo as figuras \ref{img:subfigura1} e \ref{img:subfigura2}. Ao inserir uma figura, ela é automaticamente identificada e incluída no elemento pré-textual da lista de figuras.
+
+
+
+
+
+\subsection{Subseção de exemplo 1 - Sobre as seções}
+
+
+
+\section{Seção de exemplo 3 - Sobre tabelas}
+
+
+\begin{table}[!htb]
+	\centering
+	\caption{\label{tab:crossplatform} Tipos de aplicações e abordagens preferenciais.}
+	\begin{adjustbox}{max width=\textwidth}
+		\begin{tabular}{@{} p{5cm} ccc @{}}
+		\toprule
+		\textbf{Código da Aplicação} & \textbf{Web} & \textbf{Híbrida} & \textbf{Interpretada / Compilação Cruzada} \\ \hline
+
+		\textbf{Aplicações baseadas em dados providos por um servidor} &
+			3 & 2 & 1
+		\\ \hline
+
+		\textbf{Aplicações independentes} & 1 & 2 & 3\\ \hline
+
+		\textbf{Aplicações baseadas em sensores e processamento de dados no dispositivo} & 1 & 2 & 3\\ \hline
+
+		\textbf{Aplicações baseadas em sensores e processamento de dados no servidor} & 1 & 3 & 2\\ \hline
+
+		\textbf{Aplicações Cliente-Servidor} & 1 & 3 & 2 \\ \bottomrule
+	\end{tabular}
+	\end{adjustbox}
+	\legend{\textbf{Fonte:} \citeonline{raj2012study} (Traduzido)}
+\end{table}
+
+

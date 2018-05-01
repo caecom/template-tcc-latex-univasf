@@ -1,0 +1,9 @@
+*.swp
+*~
+*.swo
+*.log
+
+/_minted-main
+main.*
+!main.pdf
+.DS_Store
