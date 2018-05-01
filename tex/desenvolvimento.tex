@@ -5,13 +5,25 @@
 
 \section{Seção de exemplo 1 - Como fazer citações}
 
-\lipsum[1-20]
+Existem vários tipos de citações...
 
 
 \section{Seção de exemplo 2 - Como inserir figuras}
 
+Neste trabalho iremos exemplificar duas formas de se inserir figuras no Latex. O primeiro método insere, no documento, uma figura simples por meio do comando:
 
+\textbackslash imagem\{ Escala \}\{ Arquivo sem extensão \}\{ Descrição \}\{ Fonte \}
 
+\textbf{Obs.:} A fonte pode ser uma citação do tipo  \textbackslash citeonline\{\}.
+
+A figura \ref{img:placeholder} é um exemplo deste método.
+
+%--------------------------------------------------------------------------------------
+% Esse é um exemplo de figura simples
+%--------------------------------------------------------------------------------------
+\imagem{0.15}{placeholder}{Uma figura simples}{O autor}
+
+A figura \ref{img:figura1} é um exemplo do outro tipo de figura abordada aqui, chamada de figura composta. Esta figura é composta de outras subfiguras.
 %--------------------------------------------------------------------------------------
 % Esse é um exemplo de figura composta de outras subfiguras
 %--------------------------------------------------------------------------------------
@@ -20,6 +32,7 @@
     \caption{\label{img:figura1} Exemplo de figura composta}
     \subcaptionbox{\label{img:subfigura1} Subfigura 1}{\includegraphics[scale=.1]{img/placeholder}}\qquad
     \subcaptionbox{\label{img:subfigura2} Subfigura 2}{\includegraphics[scale=.1]{img/placeholder}}
+    \vspace{1.5em}
     \legend{\textbf{Fonte:} \citeonline{SUA-REFERENCIA}}
 \label{fig:dag}
 \end{figure}
@@ -40,27 +53,23 @@
 %\label{fig:dag}
 %\end{figure}
 
-%--------------------------------------------------------------------------------------
-% Esse é um exemplo de figura simples
-%--------------------------------------------------------------------------------------
-\imagem{0.25}{placeholder}{Uma figura simples}{O autor}
+Para referenciar uma figura deve ser usada comando \textbackslash ref\{img:<label ou nome do arquivo>\}, como exemplo, estamos referenciando a figura \ref{img:placeholder}. Isso vale tanto para figuras simples quanto para as compostas, como por exemplo as figuras \ref{img:subfigura1} e \ref{img:subfigura2}. Ao inserir uma figura, ela é automaticamente identificada e incluída no elemento pré-textual da lista de figuras.
 
-
-\newpage % Quebra a página
-
-Para referenciar uma imagem deve ser usada a tag REF, como exemplo, estamos referenciando a figura \ref{img:placeholder}. Isso vale tanto para figuras simples quanto para as compostas, como por exemplo as figuras \ref{img:subfigura1} e \ref{img:subfigura2}. Ao inserir uma figura, ela é automaticamente identificada e incluída no elemento pré-textual da lista de figuras.
-
-
-
-
-
-\subsection{Subseção de exemplo 1 - Sobre as seções}
 
 
 
 \section{Seção de exemplo 3 - Sobre tabelas}
 
+As tabelas em Latex são deveras capciosas, por isso não serão abordadas em sua completude neste documento.
 
+Há um site que possui uma ferramenta interessante para ser utilizada na construção tabelas em Latex.
+
+\centerline{\href{https://www.tablesgenerator.com/}{ O Tables Generator } <-- Isto é um \textit{link} :D}
+
+Contudo, busquem entendimento sobre o assunto, pois tabelas são elementos textuais importantes e enriquecem muito o texto, quando bem construídas.
+
+A tabela \ref{tab:crossplatform} é um exemplo de como uma tabela pode ser construída, assim como a tabela do anexo \ref{anex:anexo1}.
+   
 \begin{table}[!htb]
 	\centering
 	\caption{\label{tab:crossplatform} Tipos de aplicações e abordagens preferenciais.}
@@ -86,3 +95,4 @@ Para referenciar uma imagem deve ser usada a tag REF, como exemplo, estamos refe
 \end{table}
 
 
+\section{Subseção de exemplo 4 - Seções}
