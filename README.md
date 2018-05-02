@@ -38,7 +38,7 @@ Para que a extensão minted (utilizada nos códigos fontes) possa ser utilizada
 que pode ser instalada através do `pip` (um gerenciador de pacotes do Python), como 
 mostrado abaixo
 
-````shell-session
+```shell-session
 $ pip install pygments
 ```
 
