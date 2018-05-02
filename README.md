@@ -1,5 +1,6 @@
 # template-tcc-latex-univasf
-Template em Latex para TCC do curso de Engenharia de Computação da Univasf
+
+Template em Latex para TCC do curso de Engenharia de Computação da Univasf.
 
 # Instruções de como executar e construir o seu documento
 
@@ -35,7 +36,19 @@ $ sudo apt install texlive
 
 Para compilar o projeto, basta executar as linhas a seguir
 
+```shell-session
+$ pdflatex -shell-escape main.tex
+$ bibtex main.aux
+$ pdflatex -shell-escape main.tex
+$ pdflatex -shell-escape main.tex
+```
 
+O argumento `-shell-escape` é necessário para que o *plugin* utilizado (https://github.com/gpoore/minted)
+na geração dos *snippets* de código possa ser executado.
 
+# Considerações
 
-# Windows
+O presente projeto é uma colaboração entre alunos da instituição de ensino Univasf. 
+Ele tem como base o pacote [abntex2](https://github.com/abntex/abntex2).
+Sinta-se livre para copiar, colar, modificar, etc (a licença será adicionada em breve). 
+
