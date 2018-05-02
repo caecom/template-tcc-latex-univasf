@@ -1,6 +1,7 @@
 # template-tcc-latex-univasf
 
 Template em Latex para TCC do curso de Engenharia de Computação da Univasf.
+Consulte a [documentação](https://github.com/Gabrielr2508/template-tcc-latex-univasf/blob/master/main.pdf).
 
 # Instruções de como executar e construir o seu documento
 
