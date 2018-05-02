@@ -33,6 +33,23 @@ ou
 $ sudo apt install texlive
 ``` 
 
+Para que a extensão minted (utilizada nos códigos fontes) possa ser utilizada
+é necessário utilizar o [pygments](http://pygments.org), uma biblioteca do Python,
+que pode ser instalada através do `pip` (um gerenciador de pacotes do Python), como 
+mostrado abaixo
+
+````shell-session
+$ pip install pygments
+```
+
+Na maior parte das principais distribuições GNU/Linux, isso também
+pode ser feito utilizando-se o gerenciador de pacotes da sua distribuição,
+como mostrado abaixo, para o caso do archlinux
+
+```shell-session
+$ sudo pacman -S python-pygments
+```
+
 ## Compilando o documento
 
 Para compilar o projeto, basta executar as linhas a seguir
