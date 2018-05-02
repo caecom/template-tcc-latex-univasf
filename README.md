@@ -70,6 +70,26 @@ na geração dos *snippets* de código possa ser executado.
 Alternativamente, o script `build.sh` pode ser executado, ele aceita como parâmetro
 opcional o nome do arquivo principal, assumido como padrão o `main.tex`
 
+# MS-Windows (TexMaker)
+
+A instalação do TexMaker no Windows é simples. Acesse o site [Download TexMaker](http://www.xm1math.net/texmaker/download.html) faça o *download* do executável e proceda com a instalação.
+
+Ao executar o TexMaker lembre-se de sempre fazê-lo com o modo Administrador.
+
+Com o editor aberto, vamos configurá-lo:
+1. Clique em **Opções > Configurar o Texmaker**
+1. Na aba **Comandos** substitua texto do campo **PdfLaTeX** pelo comando: 
+	> pdflatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex 
+1. Na aba **Compilar** em **Comandos de compilação rápida** selecione a **segunda** opção: 
+	> PdfLaTeX + Bib(la)tex + PdfLaTeX (x2) + View Pdf
+1. Clique em **Ok**
+
+Pronto! O TexMaker está configurado.
+
+Para compilar o projeto basta abrir o aquivo **main.tex** e clicar no botão em formato de seta ao lado do nome compilar.
+
+`Obs.: Deve-se compilar somente utilizando o **main.tex** (independentemente das alterações terem sido feitas em outros aquivos), caso contrário dará erro.`
+
 # Considerações
 
 O presente projeto é uma colaboração entre alunos da instituição de ensino Univasf. 
@@ -77,6 +97,6 @@ Ele tem como base o pacote [abntex2](https://github.com/abntex/abntex2).
 Sinta-se livre para copiar, colar, modificar, etc. 
 
 # TODO
-- [ ] adicionar exemplo de utilização usando o TexMaker;
-- [ ] adicionar documentação em ingles.
+- [x] adicionar exemplo de utilização usando o TexMaker;
+- [ ] adicionar documentação em inglês.
 
