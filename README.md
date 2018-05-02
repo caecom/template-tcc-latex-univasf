@@ -8,9 +8,9 @@ no produto final, o [documento](https://github.com/Gabrielr2508/template-tcc-lat
 
 # Instruções de como executar e construir o seu documento
 
-# GNU/Linux (linha de comando)
+## GNU/Linux (linha de comando)
 
-## Instalação do LaTeX
+### Instalação do LaTeX
 
 a execução dos comandos de *build* do projeto dependem da prévia instalação
 do LaTeX no sistema. No caso de distribuições GNU/Linux, isso geralmente se traduz
@@ -53,7 +53,7 @@ como mostrado abaixo, para o caso do archlinux
 $ sudo pacman -S python-pygments
 ```
 
-## Compilando o documento
+### Compilando o documento
 
 Para compilar o projeto, basta executar as linhas a seguir
 
@@ -70,12 +70,14 @@ na geração dos *snippets* de código possa ser executado.
 Alternativamente, o script `build.sh` pode ser executado, ele aceita como parâmetro
 opcional o nome do arquivo principal, assumido como padrão o `main.tex`
 
-# MS-Windows (TexMaker)
+## MS-Windows (TexMaker)
 
+### Instalando o TexMaker
 A instalação do TexMaker no Windows é simples. Acesse o site [Download TexMaker](http://www.xm1math.net/texmaker/download.html) faça o *download* do executável e proceda com a instalação.
 
 Ao executar o TexMaker lembre-se de sempre fazê-lo com o modo Administrador.
 
+### Configurando o TexMaker
 Com o editor aberto, vamos configurá-lo:
 1. Clique em **Opções > Configurar o Texmaker**
 1. Na aba **Comandos** substitua texto do campo **PdfLaTeX** pelo comando: 
@@ -86,6 +88,7 @@ Com o editor aberto, vamos configurá-lo:
 
 Pronto! O TexMaker está configurado.
 
+### Compilando com o TexMaker
 Para compilar o projeto basta abrir o aquivo **main.tex** e clicar no botão em formato de seta ao lado do nome compilar.
 
 `Obs.: Deve-se compilar somente utilizando o **main.tex** (independentemente das alterações terem sido feitas em outros aquivos), caso contrário dará erro.`
