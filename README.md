@@ -1,4 +1,4 @@
-# template-tcc-latex-univasf [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Gabrielr2508/template-tcc-latex-univasf/issues) [![HitCount](http://hits.dwyl.io/Gabrielr2508/template-tcc-latex-univasf.svg)](http://hits.dwyl.io/Gabrielr2508/template-tcc-latex-univasf)
+# template-tcc-latex-univasf [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square)](https://github.com/Gabrielr2508/template-tcc-latex-univasf/) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/Gabrielr2508/template-tcc-latex-univasf/issues) [![HitCount](http://hits.dwyl.io/Gabrielr2508/template-tcc-latex-univasf.svg)](http://hits.dwyl.io/Gabrielr2508/template-tcc-latex-univasf)
 
 Template em Latex para TCC do curso de Engenharia de Computação da Univasf.  
 
