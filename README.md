@@ -74,7 +74,7 @@ opcional o nome do arquivo principal, assumido como padrão o `main.tex`
 
 O presente projeto é uma colaboração entre alunos da instituição de ensino Univasf. 
 Ele tem como base o pacote [abntex2](https://github.com/abntex/abntex2).
-Sinta-se livre para copiar, colar, modificar, etc (a licença será adicionada em breve). 
+Sinta-se livre para copiar, colar, modificar, etc. 
 
 # TODO
 - [ ] adicionar exemplo de utilização usando o TexMaker;
