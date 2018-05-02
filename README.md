@@ -65,7 +65,10 @@ $ pdflatex -shell-escape main.tex
 ```
 
 O argumento `-shell-escape` é necessário para que o *plugin* utilizado (https://github.com/gpoore/minted)
-na geração dos *snippets* de código possa ser executado.
+na geração dos *snippets* de código possa ser executado.  
+
+Alternativamente, o script `build.sh` pode ser executado, ele aceita como parâmetro
+opcional o nome do arquivo principal, assumido como padrão o `main.tex`
 
 # Considerações
 
