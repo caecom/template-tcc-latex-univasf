@@ -96,7 +96,7 @@ Para compilar o projeto basta abrir o aquivo **main.tex** e clicar no botão em 
 ## MS-Windows Visual Studio Code
 
 ### Extensão LaTeX Workshop
-Instale a extensão [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) e suas **dependencias**.
+Instale a extensão [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) e suas **dependências**.
 
 Instale o pacote [minted](http://texdoc.net/texmf-dist/doc/latex/minted/minted.pdf) via seu _Package Manager_ favorito.
 
