@@ -17,11 +17,11 @@ do LaTeX no sistema. No caso de distribuições GNU/Linux, isso geralmente se tr
 na instalação do pacode texlive, utilizando o gerenciador de pacotes da distribuição:
 
 - Archlinux
-    consulte a [documentação](https://wiki.archlinux.org/index.php/TeX_Live)
+	consulte a [documentação](https://wiki.archlinux.org/index.php/TeX_Live)
 - distribuições baseadas no Debian
-    consulte a [documentação](https://wiki.debian.org/Latex)
+	consulte a [documentação](https://wiki.debian.org/Latex)
 - distribuições baseadas no Red Hat
-    consulte a [documentação](https://fedoraproject.org/wiki/Features/TeXLive)
+	consulte a [documentação](https://fedoraproject.org/wiki/Features/TeXLive)
 
 Geralmente, isso se traduz em executar um comando como o mostrado abaixo, para
 o caso do Archlinux:
@@ -81,9 +81,9 @@ Ao executar o TexMaker lembre-se de sempre fazê-lo com o modo Administrador.
 Com o editor aberto, vamos configurá-lo:
 1. Clique em **Opções > Configurar o Texmaker**
 1. Na aba **Comandos** substitua texto do campo **PdfLaTeX** pelo comando:
-    > pdflatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+	> pdflatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
 1. Na aba **Compilar** em **Comandos de compilação rápida** selecione a **segunda** opção:
-    > PdfLaTeX + Bib(la)tex + PdfLaTeX (x2) + View Pdf
+	> PdfLaTeX + Bib(la)tex + PdfLaTeX (x2) + View Pdf
 1. Clique em **Ok**
 
 Pronto! O TexMaker está configurado.
@@ -104,35 +104,35 @@ No objeto de configurações do VS-code insira o seguinte:
 
 ```JSON
 "latex-workshop.latex.tools": [
-    {
-        "name": "latexmk",
-        "command": "latexmk",
-        "args": [
-            "-synctex=1",
-            "-interaction=nonstopmode",
-            "-file-line-error",
-            "-pdf",
-            "%DOC%"
-        ]
-    },
-    {
-        "name": "pdflatex",
-        "command": "pdflatex",
-        "args": [
-            "-synctex=1",
-            "-interaction=nonstopmode",
-            "-file-line-error",
-            "--shell-escape",
-            "%DOC%"
-        ]
-    },
-    {
-        "name": "bibtex",
-        "command": "bibtex",
-        "args": [
-            "%DOCFILE%"
-        ]
-    }
+	{
+		"name": "latexmk",
+		"command": "latexmk",
+		"args": [
+			"-synctex=1",
+			"-interaction=nonstopmode",
+			"-file-line-error",
+			"-pdf",
+			"%DOC%"
+		]
+	},
+	{
+		"name": "pdflatex",
+		"command": "pdflatex",
+		"args": [
+			"-synctex=1",
+			"-interaction=nonstopmode",
+			"-file-line-error",
+			"--shell-escape",
+			"%DOC%"
+		]
+	},
+	{
+		"name": "bibtex",
+		"command": "bibtex",
+		"args": [
+			"%DOCFILE%"
+		]
+	}
 ]
 ```
 
