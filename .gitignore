@@ -2,7 +2,7 @@
 *~
 *.swo
 *.log
-/.vscode
+
 /_minted-main
 main.*
 !main.pdf
