@@ -93,7 +93,7 @@ Para compilar o projeto basta abrir o aquivo **main.tex** e clicar no botão em 
 
 `Obs.: Deve-se compilar somente utilizando o **main.tex** (independentemente das alterações terem sido feitas em outros aquivos), caso contrário dará erro.`
 
-## MS-Windows Visual Studio Code
+## MS-Windows (Visual Studio Code)
 
 ### Extensão LaTeX Workshop
 Instale a extensão [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) e suas **dependências**.
