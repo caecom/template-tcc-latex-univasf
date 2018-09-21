@@ -138,7 +138,29 @@ No objeto de configurações do VS-code insira o seguinte:
 
 Ao compilar escolha a receita `pdflatex -> bibtex -> pdflatex*2`
 
-_You are ready to go_
+![vs-code-compile](/img/vs-code-compile.png)
+
+É possível também alterar as receitas da extensão acrecentando o seguinte ao seu objeto de configuração do VScode:
+
+```JSON
+"latex-workshop.latex.recipes": [
+	{
+		"name": "pdflatex -> bibtex -> pdflatex*2",
+		"tools": [
+			"pdflatex",
+			"bibtex",
+			"pdflatex",
+			"pdflatex"
+		]
+	}
+]
+```
+
+Com isso é possível compilar a partir do arquivo `main.tex` utilizando o atalho `Ctrl + Alt + B`.
+
+Ou via comandos do VScode, pressionando,  `Ctrl + Shift + P`, e prcurando por `LaTex Workshop: Build LaTex Project:  `
+
+
 
 # Considerações
 
