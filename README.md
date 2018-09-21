@@ -93,6 +93,52 @@ Para compilar o projeto basta abrir o aquivo **main.tex** e clicar no botão em 
 
 `Obs.: Deve-se compilar somente utilizando o **main.tex** (independentemente das alterações terem sido feitas em outros aquivos), caso contrário dará erro.`
 
+## MS-Windows (Visual Studio Code)
+
+### Extensão LaTeX Workshop
+Instale a extensão [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) e suas **dependências**.
+
+Instale o pacote [minted](http://texdoc.net/texmf-dist/doc/latex/minted/minted.pdf) via seu _Package Manager_ favorito.
+
+No objeto de configurações do VS-code insira o seguinte:
+
+```JSON
+"latex-workshop.latex.tools": [
+	{
+		"name": "latexmk",
+		"command": "latexmk",
+		"args": [
+			"-synctex=1",
+			"-interaction=nonstopmode",
+			"-file-line-error",
+			"-pdf",
+			"%DOC%"
+		]
+	},
+	{
+		"name": "pdflatex",
+		"command": "pdflatex",
+		"args": [
+			"-synctex=1",
+			"-interaction=nonstopmode",
+			"-file-line-error",
+			"--shell-escape",
+			"%DOC%"
+		]
+	},
+	{
+		"name": "bibtex",
+		"command": "bibtex",
+		"args": [
+			"%DOCFILE%"
+		]
+	}
+]
+```
+
+Ao compilar escolha a receita `pdflatex -> bibtex -> pdflatex*2`
+
+_You are ready to go_
 # Considerações
 
 O presente projeto é uma colaboração entre alunos da instituição de ensino Univasf. 
