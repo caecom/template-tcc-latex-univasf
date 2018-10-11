@@ -100,6 +100,8 @@ Instale a extensão [LaTeX Workshop](https://marketplace.visualstudio.com/items?
 
 Instale o pacote [minted](http://texdoc.net/texmf-dist/doc/latex/minted/minted.pdf) via seu _Package Manager_ favorito.
 
+## Como contribuir...
+
 No objeto de configurações do VS-code insira o seguinte:
 
 ```JSON
