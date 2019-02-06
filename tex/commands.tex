@@ -219,3 +219,47 @@
 \end{listing}
 }
 
+
+% -----------------------------------------------------------------------------
+% Pacotes adicionados por @ruanmed
+% ----------------------------------------------------------------------------- 
+\usepackage[binary-units=true]{siunitx}
+
+
+%--------------------------------------------------------------------------------
+% Comando para inserir códigos - by @ruanmed
+%--------------------------------------------------------------------------------
+\usepackage{caption}
+
+\newenvironment{code}{\captionsetup{type=listing}}{}
+\SetupFloatingEnvironment{listing}{name=Código}
+
+\newcommand{\sourcecodenolist}[4]{
+	\begin{code}
+	    \refstepcounter{sourcecode}
+        \captionof{listing}{#1 }
+        \label{code:#2}
+        \inputminted[linenos, bgcolor=bg, tabsize=4,breaklines]{#3}{codes/#4}
+        \Wedidthis
+    \end{code}
+}
+
+% \newcommand{\sourcecodenolist}[4]{
+% 	\refstepcounter{sourcecode}
+% 	\captionof{listing}{#1 \label{cmd:#2}}
+% 	\inputminted[linenos, bgcolor=bg, tabsize=4,breaklines]{#3}{codes/#4}
+% 	\Wedidthis
+% }
+
+% \newcommand{\sourcecodenolist}[4]{
+% 	\refstepcounter{sourcecode}
+% 	\captionof{listing}{#1 \label{cmd:#2}}
+% 	\inputminted[linenos, bgcolor=bg, tabsize=4,breaklines]{#3}{codes/#4}
+% 	\Wedidthis
+% }
+
+
+\newcommand{\sourcecodeinline}[2]{
+	\mintinline[linenos, bgcolor=bg, tabsize=4,breaklines]{#1}{#2}
+}
+

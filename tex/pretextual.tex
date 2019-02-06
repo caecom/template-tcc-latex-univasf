@@ -2,28 +2,42 @@
 % Constrói a capa com base na seção de identificação do main.tex
 %--------------------------------------------------------------------------------
 \begin{capa}
-\center
-	\includegraphics[scale=0.6]{img/univasf.jpg}
-
-	{\ABNTEXchapterfont\bfseries\large\imprimirinstituicao}
-
-	\vspace*{5cm}
-	{\ABNTEXchapterfont\bfseries\large\imprimirautor}
-
-	\vfill
-	{\ABNTEXchapterfont\bfseries\large\imprimirtitulo}
-	\vfill
-	\ABNTEXchapterfont\bfseries\large\imprimirlocal\\ \the\year
-
-	\vspace*{1cm}
-
+    \setlength{\belowcaptionskip}{0pt}
+    \setlength{\abovecaptionskip}{0pt}
+    \setlength{\intextsep}{-18pt}
+        \begin{figure}[h]
+    		\begin{center}
+    		    \includegraphics[scale=1.0]{img/LOGO_UNIVASF_big.pdf}
+    		\end{center}
+    	\end{figure}
+        
+        %\includegraphics[scale=0.6]{img/univasf.jpg}
+        \center
+    	{\ABNTEXchapterfont\large\imprimirinstituicao}
+    
+    	\vspace*{2cm}
+    	    {\imprimirautor}
+    	\vspace*{2cm}
+        \begin{center}
+    		\ABNTEXchapterfont\bfseries\large\imprimirtitulo
+        \end{center}
+    	\vfill
+        
+    	\ABNTEXchapterfont\bfseries\large\imprimirlocal\\ 
+    	\the\year
+    	
+    	\vspace*{1cm}
 \end{capa}
 %--------------------------------------------------------------------------------
 % Constrói a folha de rosto com base na seção de identificação do main.tex
 %--------------------------------------------------------------------------------
 \begin{folhaderosto}
-\center
-		{\ABNTEXchapterfont\bfseries\large\imprimirautor}
+    \center
+    	{\ABNTEXchapterfont\large\imprimirinstituicao}
+    	
+		\vspace*{2cm}
+    	    {\imprimirautor}
+    	\vspace*{2cm}
 		\vspace*{\fill}
 
 		{\ABNTEXchapterfont\bfseries\large\imprimirtitulo}
@@ -40,7 +54,8 @@
 		\end{minipage}%
 		\vspace*{\fill}}%
 		\vspace*{\fill}
-			\ABNTEXchapterfont\bfseries\large\imprimirlocal\\ \the\year
+			\ABNTEXchapterfont\bfseries\large\imprimirlocal\\ 
+			\the\year
 		\vspace*{1cm}
 \end{folhaderosto}
 
@@ -251,3 +266,5 @@
 \pdfbookmark[0]{\contentsname}{toc} 
 \tableofcontents*
 \cleardoublepage
+
+
