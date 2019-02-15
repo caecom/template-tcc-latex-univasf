@@ -65,10 +65,10 @@
   \noindent\makebox[\linewidth]{Equação ~\theequationset: #1}
  }
 
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Adequação dos títulos dos capitulos, seções, subseções às normas da Univasf
 % Added by @Gabrielr2508
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \renewcommand{\ABNTEXchapterfont}{\fontseries{b}}
 \renewcommand{\ABNTEXchapterfontsize}{\normalsize}
 
@@ -81,10 +81,10 @@
 \renewcommand{\ABNTEXsubsubsectionfont}{\fontseries{m}}
 \renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
 
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % CONFIGURAÇÕES DE PACOTES
 % Configurações do pacote backref
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Usado sem a opção hyperpageref de backref
 \renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
 % Texto padrão antes do número das páginas
@@ -99,9 +99,9 @@
 		Citado #1 vezes nas páginas #2.%
 	\fi}%
 
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Configurações de aparência do PDF final
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % alterando o aspecto da cor azul
 \definecolor{blue}{RGB}{41,5,195}
 
@@ -134,15 +134,15 @@
 % Controle do espaçamento entre um parágrafo e outro:
 \setlength{\parskip}{0.2cm}  % tente também \onelineskip
 
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % compila o indice
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \makeindex
 % ---
 
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Comando para inserir imagens de forma simples
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \newcommand{\imagem}[4]
 {%			\imagem{x.x}{nomeimg}{titulo}{fonte}
 	\begin{figure}[!htb]
@@ -154,20 +154,20 @@
 	\end{figure}
 }%
 
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Creio que esses comandos sejam para desenhar algo, aguardando explicações de @leolleocomp
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \newcommand{\xx} {$\bigotimes$}
 \newcommand{\oo} {$\bigcirc$}
 
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Biblioteca para códigos-fonte
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \usepackage[newfloat=true]{minted}
 
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Caixas batutas - by @leolleocomp
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \usepackage[most]{tcolorbox}
 \tcbuselibrary{breakable}
 
@@ -178,25 +178,25 @@
 
 \SetupFloatingEnvironment{listing}{name=Código, listname=Lista de códigos}
 
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % configuração do contador dos códigos-fonte - by @leolleocomp
 % assim como as figuras, começa em 1
 \newcounter{sourcecode}
-%--------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % @leolleocomp
 % stackoverflow code
 % peguei da resposta abaixo
 % https://stackoverflow.com/questions/24086366/change-latex-minted-listings-numbering-to-include-current-section?answertab=votes#tab-top
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \makeatletter
 \renewcommand*{\thelisting}{\thesourcecode}
 \makeatother
 
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Peçam explicações a @leolleo
 % WHO DID THIS?
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \newcommand{\Ididthis}{
 %	\legend{\textbf{Fonte:} O autor (\the\year).}
 \legend{\textbf{Fonte:} O autor}
@@ -206,9 +206,9 @@
 	\legend{\textbf{Fonte:} \citeonline{#1}.}
 }
 
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Comando para inserir códigos - by @leolleocomp
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \newcommand{\sourcecode}[4]{
 \begin{listing}[H]
 	\refstepcounter{sourcecode}
@@ -226,9 +226,9 @@
 \usepackage[binary-units=true]{siunitx}
 
 
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Comando para inserir códigos - by @ruanmed
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \usepackage{caption}
 
 \newenvironment{code}{\captionsetup{type=listing}}{}
@@ -263,3 +263,30 @@
 	\mintinline[linenos, bgcolor=bg, tabsize=4,breaklines]{#1}{#2}
 }
 
+
+% CONFIGURACAO DO SUMARIO
+%-------------------------------------------------------------------------------
+% Modifica o espaçamento no sumário
+% Nao ha espacos, exceto para as entradas de capitulos
+\setlength{\cftbeforeparagraphskip}{0pt}
+\setlength{\cftbeforesubsectionskip}{0pt}
+\setlength{\cftbeforesectionskip}{0pt}
+\setlength{\cftbeforesubsubsectionskip}{0pt}
+\setlength{\cftbeforechapterskip}{\onelineskip}
+
+% Alteração da indentação dos itens do sumário
+\cftsetindents{chapter}{0pt}{42pt}
+\cftsetindents{section}{0pt}{42pt}
+\cftsetindents{subsection}{0pt}{42pt}
+\cftsetindents{subsubsection}{0pt}{42pt}
+
+% Modifica a formatacao dos textos
+
+% Secao Primaria (Chapter): Caixa alta, Negrito, tamanho 12
+\makeatletter
+\settocpreprocessor{chapter}{%
+  \let\tempf@rtoc\f@rtoc%
+  \def\f@rtoc{%
+  \texorpdfstring{\bfseries\MakeTextUppercase{\tempf@rtoc}}{\tempf@rtoc}}%
+}
+\makeatother
