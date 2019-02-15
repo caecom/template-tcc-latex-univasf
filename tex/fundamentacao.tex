@@ -198,15 +198,19 @@ taxa de evasão menor que cursos totalmente a distância. A Tabela 1 compara os
 \cite{abed2013ead,abed2014ead,abed2015ead,abed2016ead}
 
 % Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
 % \usepackage{multirow}
 \begin{table}[]
-  \begin{tabular}{|l|l|l|l|l|}
-  \hline
-  \multicolumn{1}{|c|}{\multirow{2}{*}{Taxas de evasão declaradas}} & \multicolumn{4}{c|}{Percentuais de instituições declarantes, por faixa}                                       \\ \cline{2-5}
-  \multicolumn{1}{|c|}{}                                            & \multicolumn{1}{c|}{2013} & \multicolumn{1}{c|}{2014} & \multicolumn{1}{c|}{2015} & \multicolumn{1}{c|}{2016} \\ \hline
-  Até 25\%                                                          & 65\%                      & 50\%                      & 53\%                      & 58\%                      \\ \hline
-  Entre 26 e 50\%                                                   & 24\%                      & 38\%                      & 40\%                      & 19\%                      \\ \hline
-  Acima de 50\%                                                     & 2\%                       & 2\%                       & 7\%                       & 1\%                       \\ \hline
-  Não declararam                                                    & 9\%                       & 10\%                      & -                         & 22\%                      \\ \hline
+  \centering
+  \caption{Taxas de evasão ao longo dos anos segundo o censo realizado pela ABED}
+  \label{tableEvasionTax}
+  \begin{tabular}{@{}lllll@{}}
+    \toprule
+    \multicolumn{1}{c}{\multirow{2}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Taxas de evasão \\ declaradas\end{tabular}}}} & \multicolumn{4}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Percentuais de instituições\\ declarantes, por faixa\end{tabular}}} \\ \cmidrule(l){2-5}
+    \multicolumn{1}{c}{} & \textbf{2013} & \textbf{2014} & \textbf{2015} & \textbf{2016} \\ \midrule
+    Até 25\% & 65\% & 50\% & 53\% & 58\% \\
+    Entre 26 e 50\% & 24\% & 38\% & 40\% & 19\% \\
+    Acima de 50\% & 2\% & 2\% & 7\% & 1\% \\
+    Não declararam & 9\% & 10\% & - & 22\% \\ \bottomrule
   \end{tabular}
 \end{table}
