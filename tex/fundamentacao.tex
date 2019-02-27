@@ -501,3 +501,24 @@ validar o modelo para aprender as características do sistema através dos dados
 \citeonline{russell2011artificial} definiram, em termos gerais, Aprendizagem
 Supervisionada como a situação em que o agente observa alguns exemplos de pares
 entrada/saída e aprende uma função que mapeia de entradas para saídas.
+
+A tarefa de Aprendizagem Supervisionada é a seguinte:
+
+Dados um conjunto de treinamento de \(N\) exemplos de pares entrada/saída
+\[ (x_1,y_1),(x_2,y_2)\ldots(x_n,y_n), \]
+onde cada \(y_j\) foi gerado por uma função desconhecida \(y = f(x)\), descobrir
+uma função \(h\) que aproxime a verdadeira função \(f\)
+\cite{russell2011artificial}.
+
+Na definição acima, \(x\) e \(y\) podem ser qualquer valor, não necessariamente
+numérico. A função \(h\) é uma hipótese. Aprender é procurar em um espaço de
+hipóteses possíveis por uma que tenha alta performance, mesmo em exemplos não
+contidos no conjunto de treinamento. Para mensurar a acurácia de uma hipótese se
+utiliza um conjunto de teste, exemplos que são distintos do conjunto de
+treinamento. É dito que uma hipótese generaliza bem se prediz corretamente os
+valores \(y\) para exemplos novos \cite{russell2011artificial}.
+
+Quando a saída \(y\) é uma em um conjunto finito de valores, o problema de
+aprendizado é denominado classificação, e é chamado classificação booleana ou
+classificação binária quando existem apenas dois valores
+possíveis\cite{russell2011artificial}.
