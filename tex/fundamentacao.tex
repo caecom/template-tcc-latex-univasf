@@ -522,3 +522,77 @@ Quando a saída \(y\) é uma em um conjunto finito de valores, o problema de
 aprendizado é denominado classificação, e é chamado classificação booleana ou
 classificação binária quando existem apenas dois valores
 possíveis\cite{russell2011artificial}.
+
+\subsection{Classificação}
+
+De acordo com \citeonline{tan2009introduccao} Classificação é a tarefa de
+organizar objetos em uma entre diversas categorias pré-definidas. É um problema
+universal que engloba muitas aplicações diferentes. É a tarefa de aprender uma
+função alvo \(f\) que mapeie cada conjunto de atributos \(x\) para um dos
+rótulos de classes \(y\) pré-determinados. A função alvo também pode ser chamada
+de modelo de classificação.
+
+\begin{figure}[!htb]
+  \centering
+  \caption{\label{classification} Exemplo de classificação}
+  \subcaptionbox{\label{classificationA}}{\includegraphics[scale=.80]{img/classificacao_a}}\qquad
+  \subcaptionbox{\label{classificationB}}{\includegraphics[scale=.80]{img/classificacao_b}}
+  \vspace{1.5em}
+  \Ididthis
+\end{figure}
+
+Em problemas de classificação, assumimos que são disponibilizados dados
+etiquetados (classes) para gerar regras (i.e., gerar classificadores através do
+treinamento) que podem ajudar a atribuir uma etiqueta a novos dados que não
+possuem classes. Neste caso, podemos derivar uma regra exata pela
+disponibilidade das classes. Na Figura \ref{classification} vemos uma ilustração
+deste exemplo. É mostrado duas classes, etiquetadas com pontos brancos e pontos
+pretos, e uma reta (Figura \ref{classificationB}) representado a regra que nos
+ajuda a estabelecer uma classe para cada novo ponto
+\cite{suthaharan2016machine}.
+
+Uma técnica de classificação é uma abordagem sistemática para construção de
+modelos de classificação a partir de dados de entrada. Cada técnica implementa
+um algoritmo de aprendizagem para identificar um modelo que seja mais apropriado
+para o relacionamento entre o conjunto de atributos e as classes dos dados
+entrada. O modelo gerado pelo algoritmo de aprendizagem deve se adaptar aos
+dados de entrada e prever corretamente os rótulos de classes de registros que
+ele não teve contato antes. Ou seja, um dos principais objetivos do algoritmo de
+aprendizagem é gerar modelos com grande capacidade de generalização
+\cite{tan2009introduccao}.
+
+\imagem{1.0}{construcao_de_classificacao}{\label{classificationConstruction}
+Abordagem geral para a construção de um modelo de classificação}
+{\cite{tan2009introduccao}}
+
+Em uma abordagem geral para a construção de um modelo de classificação,
+primeiro, um conjunto de treinamento consistindo de registros com rótulos de
+classe conhecido é fornecido. O conjunto de treinamento é usado para construir
+um modelo de classificação, que é então aplicado a um conjunto de testes, i. e.
+registros com rótulos desconhecidos para o modelo. A Figura
+\ref{classificationConstruction} ilustra essa abordagem geral
+\cite{tan2009introduccao}.
+
+Segundo \citeonline{tan2009introduccao} a avaliação do desempenho de um modelo
+de classificação é baseada na contagem de registros do conjunto de teste que
+foram classificados correta e incorretamente. Estas contagens são organizadas em
+uma tabela denominada matriz de confusão. A Tabela 3 apresenta uma matriz de
+confusão para um problema de classificação binária. Baseado nas entradas da
+matriz de confusão, o número de previsões corretas realizadas pelo modelo é
+\((f_{11} + f_{00})\) e o número de previsões incorretas é \((f_{10} +
+f_{01})\).
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[]
+  \centering
+  \caption{My caption}
+  \label{my-label}
+  \begin{tabular}{ll|c|c|}
+    \cline{3-4}
+    \multicolumn{1}{c}{\textbf{}} & \multicolumn{1}{c|}{\textbf{}} & \multicolumn{2}{l|}{\textbf{Classe prevista}} \\ \cline{3-4}
+    & \multicolumn{1}{c|}{\textbf{}} & Classe = 1 & Classe = 0 \\ \hline
+    \multicolumn{1}{|l|}{\multirow{2}{*}{\textbf{Classe real}}} & Classe = 1 & $f_{11}$ & $f_{10}$ \\ \cline{2-4}
+    \multicolumn{1}{|l|}{} & Classe = 0 & $f_{01}$ & $f_{00}$ \\ \hline
+  \end{tabular}
+\end{table}
