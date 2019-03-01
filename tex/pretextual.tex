@@ -10,11 +10,11 @@
     		    \includegraphics[scale=1.0]{img/LOGO_UNIVASF_big.pdf}
     		\end{center}
     	\end{figure}
-        
+
         %\includegraphics[scale=0.6]{img/univasf.jpg}
         \center
     	{\ABNTEXchapterfont\large\imprimirinstituicao}
-    
+
     	\vspace*{2cm}
     	    {\imprimirautor}
     	\vspace*{2cm}
@@ -22,10 +22,10 @@
     		\ABNTEXchapterfont\bfseries\large\imprimirtitulo
         \end{center}
     	\vfill
-        
-    	\ABNTEXchapterfont\bfseries\large\imprimirlocal\\ 
+
+    	\ABNTEXchapterfont\bfseries\large\imprimirlocal\\
     	\the\year
-    	
+
     	\vspace*{1cm}
 \end{capa}
 %--------------------------------------------------------------------------------
@@ -34,7 +34,7 @@
 \begin{folhaderosto}
     \center
     	{\ABNTEXchapterfont\large\imprimirinstituicao}
-    	
+
 		\vspace*{2cm}
     	    {\imprimirautor}
     	\vspace*{2cm}
@@ -54,14 +54,14 @@
 		\end{minipage}%
 		\vspace*{\fill}}%
 		\vspace*{\fill}
-			\ABNTEXchapterfont\bfseries\large\imprimirlocal\\ 
+			\ABNTEXchapterfont\bfseries\large\imprimirlocal\\
 			\the\year
 		\vspace*{1cm}
 \end{folhaderosto}
 
 %--------------------------------------------------------------------------------
 % Constrói a ficha catalográfia com base na seção de identificação do main.tex
-% Está comentado porque no final das contas a biblioteca do seu campus que gera a 
+% Está comentado porque no final das contas a biblioteca do seu campus que gera a
 % numeração, você pode adicionar os numeros aqui, ou anexar o pdf gerado por eles
 % ao documento.
 %--------------------------------------------------------------------------------
@@ -100,7 +100,7 @@
 %\end{fichacatalografica}
 
 %--------------------------------------------------------------------------------
-% Anexando a ficha catalogáfica e a folha de aprovação 
+% Anexando a ficha catalogáfica e a folha de aprovação
 %--------------------------------------------------------------------------------
 \includepdf[pages=-]{anexos/ficha.pdf}
 
@@ -109,7 +109,7 @@
 \setlength{\ABNTEXsignwidth}{12cm}
 
 %--------------------------------------------------------------------------------
-% Está comentado pelo mesmo motivo da ficha catalográfica 
+% Está comentado pelo mesmo motivo da ficha catalográfica
 %--------------------------------------------------------------------------------
 %\begin{folhadeaprovacao}
 %	\begin{center}
@@ -137,24 +137,24 @@
 %	    \vspace*{\fill}}
 %	\end{center}
 %
-%	\vspace*{\fill}	
-%	
+%	\vspace*{\fill}
+%
 %	\begin{center}
 %			 \ABNTEXchapterfont\large Aprovado em: \_\_\_\_ de \_\_\_\_ de 2017
 %	\end{center}
 
 %	\vspace*{\fill}
-	
+
 %	\begin{center}
 %			 \ABNTEXchapterfont\bfseries\large Banca Examinadora
 %	\end{center}
-%		
+%
 %   \ABNTEXchapterfont\assinatura{Fábio Nelson de Sousa Pereira, Mestre, Universidade Federal do Vale do São Francisco}
 %	\ABNTEXchapterfont\assinatura{Jorge Luis Cavalcanti Ramos, Doutor, Universidade Federal do vale do São Francisco}
 %  \ABNTEXchapterfont\assinatura{Ricardo Argenton Ramos, Doutor, Universidade Federal do Vale do São Francisco}
 %	 \vspace*{\fill}
 
-	 
+
 %\end{folhadeaprovacao}
 
 %--------------------------------------------------------------------------------
@@ -170,7 +170,7 @@
 % Seção de agradecimentos
 %--------------------------------------------------------------------------------
 \begin{agradecimentos}
-	
+
 \lipsum[2-4]
 
 \end{agradecimentos}
@@ -209,7 +209,7 @@
 \begin{otherlanguage*}{english}
 
 \lipsum[3-4]
-	
+
 	\vspace{\onelineskip}
 
 	\noindent
@@ -237,6 +237,13 @@
 \cleardoublepage
 
 %---------------------------------------------------------------------------------
+% Insere lista de quadros
+%---------------------------------------------------------------------------------
+\pdfbookmark[0]{\listofquadrosname}{loq}
+\listofquadros*
+\cleardoublepage
+
+%---------------------------------------------------------------------------------
 % Ajusta lista de código - alterar de figures para códigos - by @Gabrielr2508
 %---------------------------------------------------------------------------------
 \makeatletter
@@ -257,13 +264,13 @@
 \begin{siglas}
 	\item[LI]       Lorem Ipsum
     \item[LII]		Lorem Ipsum Ipsum
-	    
+
 \end{siglas}
 
 %---------------------------------------------------------------------------------
 % Insere o sumario
 %---------------------------------------------------------------------------------
-\pdfbookmark[0]{\contentsname}{toc} 
+\pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents*
 \cleardoublepage
 
