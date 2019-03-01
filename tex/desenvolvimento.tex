@@ -69,7 +69,7 @@ Há um site que possui uma ferramenta interessante para ser utilizada na constru
 Contudo, busquem entendimento sobre o assunto, pois tabelas são elementos textuais importantes e enriquecem muito o texto, quando bem construídas.
 
 A tabela \ref{tab:crossplatform} é um exemplo de como uma tabela pode ser construída, assim como a tabela do anexo \ref{anex:anexo1}.
-   
+
 \begin{table}[!htb]
 	\centering
 	\caption{\label{tab:crossplatform} Tipos de aplicações e abordagens preferenciais.}
@@ -94,5 +94,19 @@ A tabela \ref{tab:crossplatform} é um exemplo de como uma tabela pode ser const
 	\legend{\textbf{Fonte:} \citeonline{raj2012study} (Traduzido)}
 \end{table}
 
+Também é possível criar quadros, que são ligeiramente diferente de tabelas. Acompanhe o exemplo no Quadro \ref{qua:confusionmatrix}
+
+\begin{quadro}
+	\centering
+	\caption{\label{qua:confusionmatrix}Exemplo de matriz de confusão}
+	\begin{tabular}{ll|c|c|}
+		\cline{3-4}
+		\multicolumn{1}{c}{\textbf{}} & \multicolumn{1}{c|}{\textbf{}} & \multicolumn{2}{l|}{\textbf{Classe prevista}} \\ \cline{3-4}
+		 & \multicolumn{1}{c|}{\textbf{}} & Classe = 1 & Classe = 0 \\ \hline
+		\multicolumn{1}{|l|}{\multirow{2}{*}{\textbf{Classe real}}} & Classe = 1 & $f_{11}$ & $f_{10}$ \\ \cline{2-4}
+		\multicolumn{1}{|l|}{} & Classe = 0 & $f_{01}$ & $f_{00}$ \\ \hline
+	\end{tabular}
+	\Ididthis
+\end{quadro}
 
 \section{Subseção de exemplo 4 - Seções}
