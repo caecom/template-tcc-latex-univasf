@@ -42,12 +42,12 @@
 \usepackage{gensymb}
 \usepackage{amsmath}
 \usepackage{array}
-\usepackage{float}
+% \usepackage{float}
 \usepackage{xcolor,colortbl}
 \usepackage{longtable}
 \usepackage{scalefnt}
 \usepackage{listings}			% inserir codigo fonte
-
+\usepackage{morewrites} % necessário pois estamos screvendo muitos arquivos
 
 % -----------------------------------------------------------------------------
 % Pacotes adicionados por @Gabrielr2508
@@ -210,7 +210,7 @@
 % Comando para inserir códigos - by @leolleocomp
 %-------------------------------------------------------------------------------
 \newcommand{\sourcecode}[4]{
-\begin{listing}[H]
+\begin{listing}[h]
 	\refstepcounter{sourcecode}
 	\caption{#1}
 	\label{cmd:#2}
@@ -275,3 +275,22 @@
   \texorpdfstring{\bfseries\MakeTextUppercase{\tempf@rtoc}}{\tempf@rtoc}}%
 }
 \makeatother
+
+% Novo list of (listings) para QUADROS
+% retirado de https://github.com/abntex/abntex2/wiki/HowToCriarNovoAmbienteListing
+
+\newcommand{\quadroname}{Quadro}
+\newcommand{\listofquadrosname}{Lista de quadros}
+
+\newfloat[chapter]{quadro}{loq}{\quadroname}
+\newlistof{listofquadros}{loq}{\listofquadrosname}
+\newlistentry{quadro}{loq}{0}
+
+% configurações para atender às regras da ABNT
+\setfloatadjustment{quadro}{\centering}
+\counterwithout{quadro}{chapter}
+\renewcommand{\cftquadroname}{\quadroname\space}
+\renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
+
+% Configuração de posicionamento padrão:
+\setfloatlocations{quadro}{hbtp}
