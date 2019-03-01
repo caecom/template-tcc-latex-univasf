@@ -576,18 +576,18 @@ registros com rótulos desconhecidos para o modelo. A Figura
 Segundo \citeonline{tan2009introduccao} a avaliação do desempenho de um modelo
 de classificação é baseada na contagem de registros do conjunto de teste que
 foram classificados correta e incorretamente. Estas contagens são organizadas em
-uma tabela denominada matriz de confusão. A Tabela 3 apresenta uma matriz de
-confusão para um problema de classificação binária. Baseado nas entradas da
-matriz de confusão, o número de previsões corretas realizadas pelo modelo é
-\((f_{11} + f_{00})\) e o número de previsões incorretas é \((f_{10} +
-f_{01})\).
+uma tabela denominada matriz de confusão. O Quadro \ref{confusionMatrix}
+apresenta uma matriz de confusão para um problema de classificação binária.
+Baseado nas entradas da matriz de confusão, o número de previsões corretas
+realizadas pelo modelo é \((f_{11} + f_{00})\) e o número de previsões
+incorretas é \((f_{10} + f_{01})\).
 
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
-\begin{table}[]
+\begin{quadro}[]
   \centering
-  \caption{My caption}
-  \label{my-label}
+  \caption{Exemplo de matriz de confusão}
+  \label{confusionMatrix}
   \begin{tabular}{ll|c|c|}
     \cline{3-4}
     \multicolumn{1}{c}{\textbf{}} & \multicolumn{1}{c|}{\textbf{}} & \multicolumn{2}{l|}{\textbf{Classe prevista}} \\ \cline{3-4}
@@ -595,4 +595,5 @@ f_{01})\).
     \multicolumn{1}{|l|}{\multirow{2}{*}{\textbf{Classe real}}} & Classe = 1 & $f_{11}$ & $f_{10}$ \\ \cline{2-4}
     \multicolumn{1}{|l|}{} & Classe = 0 & $f_{01}$ & $f_{00}$ \\ \hline
   \end{tabular}
-\end{table}
+  \Ididthis
+\end{quadro}
