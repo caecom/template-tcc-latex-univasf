@@ -601,10 +601,77 @@ performance do modelo, no entanto, resumir estas informações em um único núm
 é mais conveniente quando queremos comparar o desempenho entre  diferentes
 modelos. Isto pode ser feito usando uma métrica de desempenho como a precisão,
 que é definida da seguinte maneira \cite{tan2009introduccao}:
-\[\text{Precisão} = \frac
-  {\text{Número de previsões corretas}}
-  {\text{Número total de previsões}} =
+\[
+  \text{Precisão} =
+  \frac
+    {\text{Número de previsões corretas}}
+    {\text{Número total de previsões}} =
   \frac
     {f_{11} + f_{00}}
     {f_{11} + f_{10} + f_{01} + f_{00}}
 \]
+
+\subsubsection{Árvore de decisão}
+
+Em ML, existem dois tipos de árvores de decisão: árvores de regressão e árvores
+de classificação \apudonline{lewis2000introduction}{suthaharan2016machine}. Uma
+árvore de decisão utiliza uma abordagem baseada em regras para dividir o domínio
+dos dados em múltiplos espaços lineares e prever respostas. Se as respostas
+previstas forem contínuas, então a árvore de decisão é chamada de árvore de
+regressão, e se as previsões são discretas, ou seja, pertencem a uma classe,
+então a árvore de decisão é chamada de árvore de classificação
+\cite{suthaharan2016machine}.
+
+Segundo \citeonline{suthaharan2016machine}, árvores de decisão são modelos de
+aprendizado supervisionado que mapeiam o domínio dos dados hierarquicamente em
+um conjunto de respostas. Dividindo o domínio dos dados (também chamado de nó)
+recursivamente em dois subdomínios de forma que os subdomínios tenham um maior
+ganho de informação que o nó que foi dividido. Já que o objetivo do aprendizado
+supervisionado é a classificação dos dados, portanto,  o aumento do ganho de
+informação influencia na eficiência da classificação nos subdomínios criados
+pela divisão. Encontrar a divisão que traga o máximo de ganho de informação, ou
+seja, eficiência na classificação é o objetivo do dos algoritmos de otimização
+no aprendizado supervisionado baseado em árvores de decisão.
+
+\citeonline{suthaharan2016machine} traz um exemplo de classificação usando
+árvore de decisão. Suponha que temos um sistema que produz eventos (observações)
+que podem pertencer a uma de duas classes, \(0\) ou \(1\) (e.g., chuva ou não
+chuva, cara ou coroa), e estes eventos dependem apenas de uma variável.
+Consequentemente, definimos o domínio como: \(D = \{e_1, e_2, \ldots, e_n\}\)
+(assumimos que isto é um conjunto ordenado), e seus rótulos de classe
+correspondentes \(L = {r_1, r_2, r_3, \ldots, r_n}\), onde \(r_i\) pertence
+\(\{0, 1\}\), e \(i = 1 \ldots n\). A propagação dos rótulos das classes sobre o
+domínio dos dados determina a facilidade na classificação. Representamos o ganho
+de informação do domínio \(D\) em relação a \(L\) por \(I_i\) e dividimos o
+conjunto ordenado na localização \(m\) para formar dois subdomínios \(D_1 =
+\{e_1, e_2, \ldots, e_m\}\) e \(D_2 = \{e_{m+1}, e_{m+2}, \ldots, e_n\}\) com os
+conjuntos de respostas correspondentes \(L_1 = \{r_1, r_2, \ldots, r_m\}\) e
+\(L_2 = \{r_{m+1}, r_{m+2}, \ldots, r_n\}\). Se os respectivos ganhos de
+informação são \(I_{i1}\) e \(I_{i2}\), então \(m\) será considerado a melhor
+divisão se a  \(\text{média}(I_{i1}, I_{i2}) > I_i\). Não obstante, precisamos
+de uma boa medida quantitativa para mensurar o ganho de informação obtido após a
+divisão dos dados.
+
+Vamos supor que \(p_0\) e \(p_1\) representem as probabilidades de que as
+classes \(0\) e \(1\) possam ser extraídas do domínio \(D\), respectivamente.
+Se, por exemplo, \(|p_0 - p_1| \to 1\); então podemos observar que uma classe em
+particular tem grande predominância neste domínio, portanto, não é mais
+necessário dividir os dados. Similarmente, se \(|p_0 - p_1| \to 0\), então as
+classes tem predominância igual no domínio; logo, uma divisão é necessária.
+Neste caso geramos dois subdomínios \(D_1\) e \(D_2\). Digamos que, \(q_0\) e
+\(q_1\) são as probabilidades de que a classe \(0\) e a classe \(1\) sejam
+derivadas do subdomínio \(D_1\), respectivamente. Se a divisão for eficiente,
+\(q_0 > p_0\) ou \(q_1 > p_1\). Assumindo \(q_0 > p_0\), então \(q_0 = p_0 +
+\epsilon\), onde \(\epsilon > 0\).
+\[|q_0 - q_1| = |2q_0 - 1| = |2(p_0 + \epsilon) - 1| = |2p_0 + 2\epsilon - 1|\]
+\[|q_0 - q_1| = |p_0 + 1 - p_1 + 2\epsilon - 1| = |p_0 - p_1 + 2\epsilon|\]
+Esta equação enfatiza a seguinte inequação, (quando \(q_0 > p_0)\):
+\[|q_0 - q_1| > |p_0 - p_1|\]
+
+\imagem{.75}{decision_tree}{\label{decisionTree}Exemplo de árvore de decisão usada para classificação construída com um domínio de dados uni-dimensional}{\cite{suthaharan2016machine}}
+
+As diferenças absolutas na inequação acima são as medidas quantitativas de
+proporcionalidade entre as classes em seus respectivos subdomínios. Esta medida
+probabilística é uma boa métrica para abordagem de otimização de árvores de
+decisão. Na Figura \ref{decisionTree} vemos um exemplo de árvore de decisão em
+termos de divisão de domínios focado no ganho de informação.
