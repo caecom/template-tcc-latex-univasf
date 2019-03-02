@@ -582,8 +582,6 @@ Baseado nas entradas da matriz de confusão, o número de previsões corretas
 realizadas pelo modelo é \((f_{11} + f_{00})\) e o número de previsões
 incorretas é \((f_{10} + f_{01})\).
 
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
 \begin{quadro}[]
   \centering
   \caption{Exemplo de matriz de confusão}
@@ -597,3 +595,16 @@ incorretas é \((f_{10} + f_{01})\).
   \end{tabular}
   \Ididthis
 \end{quadro}
+
+A matriz de confusão mostra informações importantes para determinar a
+performance do modelo, no entanto, resumir estas informações em um único número
+é mais conveniente quando queremos comparar o desempenho entre  diferentes
+modelos. Isto pode ser feito usando uma métrica de desempenho como a precisão,
+que é definida da seguinte maneira \cite{tan2009introduccao}:
+\[\text{Precisão} = \frac
+  {\text{Número de previsões corretas}}
+  {\text{Número total de previsões}} =
+  \frac
+    {f_{11} + f_{00}}
+    {f_{11} + f_{10} + f_{01} + f_{00}}
+\]
