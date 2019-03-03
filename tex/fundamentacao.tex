@@ -724,3 +724,13 @@ tem classes distintas, portanto, podemos atribuir aleatoriamente qualquer uma
 das duas classes. Na Figura \ref{knnC}, com \(k = 3\), dois dos vizinhos mais
 próximos do ponto dado são da classe positivo e apenas um é da classe negativo,
 logo, atribuímos ao ponto dado a classe positivo.
+
+O desempenho de um classificador usando KNN pode ser melhorado quando os
+atributos são transformados antes da análise de classificação. A forma mais
+comum de transformação é a normalização ou padronização. A normalização remove
+efeitos provocados por atributos com escalas diferentes, exemplo, o atributo
+peso de um paciente pode ser baseado na unidade quilograma enquanto os valores
+de proteína no sangue são baseados em nanograma por decilitro variando entre
+\(-3\) e \(3\), logo, o peso do paciente teria maior influência no cálculo das
+distâncias entre os pontos de exemplo e, por consequência, na classificação
+\cite{peterson2009knn}.
