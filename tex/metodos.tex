@@ -45,3 +45,49 @@ variável produz no objeto.
 
 No caso deste trabalho, o objeto de estudo é a evasão na EAD da UNIVASF e as
 variáveis foram definidas pela TDT.
+
+\section{Método}
+
+Para tratamento e preparação dos dados para os diferentes modelos de
+classificação que serão avaliados, será utilizado o processo de Descobrimento de
+Conhecimento em Banco de Dados (do inglês, Knowledge Discovery in Databases,
+KDD) como descrito por \citeonline{tan2009introduccao} e ilustrado na Figura 9.
+Este processo envolve uma série de passos com o objetivo de transformar dados
+brutos em informações úteis.
+
+\imagem{.70}{reduced_kdd}{\label{reducedKdd}Fluxo básico do processo KDD}{\citeonline{tan2009introduccao}}
+
+A fase de entrada de dados será desenvolvida, baseado no trabalho de
+\citeonline{ramos2016abordagem}, coletando as variáveis mais relevantes que
+poderiam representar cada um dos três construtos da TDT. Os dados de onde serão
+retiradas as variáveis estão armazenados nas bases de dados do Moodle,
+atualmente em uso pelos cursos de graduação oferecidos pela UNIVASF na
+modalidade EAD.
+
+Na etapa de pré-processamento de dados ocorrem as transformações e adaptações
+dos dados para os algoritmos de Mineração de Dados. Entre essas transformações
+podemos citar: normalização, limpeza de valores faltantes, identificação de
+outliers, entre outros. Esta etapa, geralmente, exige muito tempo e esforço. A
+correta execução deste passo resultará em melhores resultados nas etapas
+posteriores.
+
+No contexto deste trabalho, utilizaremos ferramentas de análises exploratórias e
+\textit{scripts} de buscas em bancos de dados para construção da base de dados a
+ser utilizada na etapa posterior.
+
+Em seguida, ocorre a etapa de mineração de dados, onde são buscados padrões de
+interesse ou características que representem as tendências dos dados, entre os
+métodos de busca de padrões podemos citar: clusterização, classificação,
+regressão, entre outros.
+
+Para este trabalho, utilizaremos os algoritmos de classificação a seguir: Árvore
+de Decisão, KNN, e Regressão Logística. Nesta etapa, os parâmetros dos
+algoritmos de classificação serão ajustados para que a performance dos mesmos
+seja melhorada.
+
+Na última etapa, pós-processamento, serão avaliados e interpretados os padrões
+extraídos na etapa de mineração, podem ocorrer retornos a qualquer etapa
+anterior para mais iterações. Esta etapa pode envolver a visualização dos
+padrões e modelos gerados, ou visualização dos dados fornecidos. Neste passo, o
+conhecimento descoberto será documentado para possível uso posterior, em uma
+ferramenta de geração de relatórios ou de visualização, tipo dashboard.
