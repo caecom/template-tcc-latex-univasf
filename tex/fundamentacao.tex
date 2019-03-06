@@ -562,7 +562,7 @@ ele não teve contato antes. Ou seja, um dos principais objetivos do algoritmo d
 aprendizagem é gerar modelos com grande capacidade de generalização
 \cite{tan2009introduccao}.
 
-\imagem{1.0}{construcao_de_classificacao}{\label{classificationConstruction}
+\imagem{.7}{construcao_de_classificacao}{\label{classificationConstruction}
 Abordagem geral para a construção de um modelo de classificação}
 {\citeonline{tan2009introduccao}}
 
@@ -669,7 +669,7 @@ derivadas do subdomínio \(D_1\), respectivamente. Se a divisão for eficiente,
 Esta equação enfatiza a seguinte inequação, (quando \(q_0 > p_0)\):
 \[|q_0 - q_1| > |p_0 - p_1|\]
 
-\imagem{.75}{decision_tree}{\label{decisionTree}Exemplo de árvore de decisão usada para classificação construída com um domínio de dados uni-dimensional}{\citeonline{suthaharan2016machine}}
+\imagem{.60}{decision_tree}{\label{decisionTree}Exemplo de árvore de decisão usada para classificação construída com um domínio de dados uni-dimensional}{\citeonline{suthaharan2016machine}}
 
 As diferenças absolutas na inequação acima são as medidas quantitativas de
 proporcionalidade entre as classes em seus respectivos subdomínios. Esta medida
@@ -785,3 +785,34 @@ Em níveis muito baixos da variável independente, a probabilidade se aproxima d
 independente aumenta, os valores previstos crescem para acima da curva, mas, em
 seguida, a inclinação começa a diminuir, aproximando a probabilidade de 100\%,
 sem, entretanto, exceder esse valor \cite{hair2009analise}.
+
+\section{Trabalhos relacionados}
+
+\citeonline{ramos2018estudo}, analisaram a performance de diferentes algoritmos
+na previsão da evasão em alunos EAD. Neste trabalho foram utilizados dados de
+turmas de dois cursos de graduação na Universidade de Pernambuco (UPE). Os
+algoritmos testados foram: Árvore de Decisão, Máquina de Vetor de Suporte
+(SVM), Rede Neural Artificial, K-Vizinhos Mais Próximos (KNN) e Regressão
+Logística. As variáveis foram construídas com base na TDT. O algoritmo com maior
+acurácia foi o KNN, com maior precisão foi o SVM e a Regressão Logística teve os
+maiores valores de Recall e Área Sob a Curva ROC (AUC).
+
+\citeonline{queiroga2018modelo}, elaboraram um modelo de predição da evasão de
+estudantes em cursos técnicos a distância, através de mineração de dados,
+utilizando dados de turmas EAD do Câmpus Visconde da Graça (CaVG) do Instituto
+Federal Sul-rio-grandense (IFSul). Os algoritmos utilizados para gerar os
+modelos testados foram: \textit{Bayes Net}, \textit{Simple Logistic},
+\textit{Multilayer Perceptron}, \textit{Random Forest} e J48, implementados na
+biblioteca WEKA. Todos os algoritmos selecionados previram com exatidão de 95\%
+a evasão de um aluno antes do final do primeiro ano. O algoritmo que mais se
+destacou no quesito acurácia foi o Random Forest com 85\%.
+
+\citeonline{manhaes2011previsao}, utilizaram mineração de dados para identificar
+antecipadamente alunos com risco de evasão. Foram utilizados dados de cursos de
+graduação da Universidade Federal do Rio de Janeiro (UFRJ). Os resultados
+mostraram que utilizando as primeiras notas semestrais dos calouros é possível
+identificar com precisão de 80\% a situação final do aluno no curso.
+
+\citeonline{paz2017identificando}, Aplicaram KDD em dados coletados em uma IES,
+e, através da tarefa de classificação, utilizando a técnica de árvores de
+decisão, atingiram acurácia de 90\% na identificação de alunos evasores.
