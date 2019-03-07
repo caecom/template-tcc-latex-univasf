@@ -202,8 +202,11 @@
  \textbf{Palavras-chave}: \textit{Palavra em inglês 1, Palavra em inglês 2, Palavra em inglês 3, Palavra em inglês 4}, Palavra 5.
 
 \end{resumo}
+\newpage
 
-%---------------------------------------------------------------------------------
+\newpage
+--------------------------\newpage
+
 % resumo em inglês
 \begin{resumo}[Abstract]
 \begin{otherlanguage*}{english}
@@ -225,36 +228,35 @@
 \begin{KeepFromToc} % Este comando evita que todas as seções dentro dele de apareçam no sumário
 \pdfbookmark[0]{\listfigurename}{lof}
 \listoffigures
-%\addcontentsline{toc}{chapter}{Lista de Figuras}
 \cleardoublepage
 
 
 %---------------------------------------------------------------------------------
 % Insere lista de tabelas
 %---------------------------------------------------------------------------------
-\pdfbookmark[0]{\listtablename}{lot}
-\listoftables
-\cleardoublepage
+% \pdfbookmark[0]{\listtablename}{lot}
+% \listoftables
+% \cleardoublepage
 
 %---------------------------------------------------------------------------------
 % Insere lista de quadros
 %---------------------------------------------------------------------------------
-\pdfbookmark[0]{\listofquadrosname}{loq}
-\listofquadros*
-\cleardoublepage
+% \pdfbookmark[0]{\listofquadrosname}{loq}
+% \listofquadros*
+% \cleardoublepage
 
 %---------------------------------------------------------------------------------
 % Ajusta lista de código - alterar de figures para códigos - by @Gabrielr2508
 %---------------------------------------------------------------------------------
-\makeatletter
-\let\l@listing\l@figure
-\def\newfloat@listoflisting@hook{\let\figurename\listingname}
-\makeatother
+% \makeatletter
+% \let\l@listing\l@figure
+% \def\newfloat@listoflisting@hook{\let\figurename\listingname}
+% \makeatother
 
 %---------------------------------------------------------------------------------
 % Insere lista de códigos - by @leolleocomp
 %---------------------------------------------------------------------------------
-\listoflistings
+% \listoflistings
 
 \end{KeepFromToc}
 
