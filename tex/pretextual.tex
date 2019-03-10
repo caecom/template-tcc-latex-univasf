@@ -1,6 +1,6 @@
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Constrói a capa com base na seção de identificação do main.tex
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \begin{capa}
     \setlength{\belowcaptionskip}{0pt}
     \setlength{\abovecaptionskip}{0pt}
@@ -28,9 +28,9 @@
 
       \vspace*{1cm}
 \end{capa}
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Constrói a folha de rosto com base na seção de identificação do main.tex
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \begin{folhaderosto}
     \center
       {\ABNTEXchapterfont\large\imprimirinstituicao}
@@ -59,12 +59,12 @@
     \vspace*{1cm}
 \end{folhaderosto}
 
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Constrói a ficha catalográfia com base na seção de identificação do main.tex
 % Está comentado porque no final das contas a biblioteca do seu campus que gera a
 % numeração, você pode adicionar os numeros aqui, ou anexar o pdf gerado por eles
 % ao documento.
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %\begin{fichacatalografica}
 %	\vspace*{\fill}					% Posição vertical
 %	\hrule							% Linha horizontal
@@ -157,27 +157,27 @@
 
 %\end{folhadeaprovacao}
 
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Insere a epígrafe
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \newpage
 \vspace*{\fill}
 \begin{flushright}
     \textit{Lorem Ipsum...}
 \end{flushright}
 
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Seção de agradecimentos
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \begin{agradecimentos}
 
 \lipsum[2-4]
 
 \end{agradecimentos}
 
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Insere a segunda epígrafe
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \begin{epigrafe}
   \vspace*{\fill}
   \begin{flushright}
@@ -190,13 +190,26 @@
 
 
 
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Seção de resumos
-%--------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % resumo em português
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
 
+  Os avanços do acesso às tecnologias da informação criou um ambiente fértil
+  para a pesquisa na área de ensino à distância. Porém, apesar da grande
+  disponibilidade e flexibilidade, os cursos da modalidade EAD, no Brasil, ainda
+  sofrem com o problema da evasão de estudantes, como vem sendo mostrado no
+  Censo EAD.BR dos ultimos anos. Acompanhando o crescimento da EAD, se
+  desenvolve também a área de Mineração de Dados Educacionais. Inspirado pela
+  Teoria da Distância Transacional, este trabalho propõe a utilização da
+  metodologia de descoberta de conhecimento em bancos de dados para construir e
+  comparar modelos de classificação da situação final de um aluno de curso EAD
+  entre duas classes, evasor ou não-evasor. Este trabalho aplica a metodologia
+  proposta por Ramos et al (2016), onde as variáveis utilizadas nos modelos
+  preditivos são construídas com base nos construtos da TDT, comparando os
+  resultados obtidos com um novo cenário educacional.
 
   \textbf{Palavras-chave}: \textit{Palavra em inglês 1, Palavra em inglês 2, Palavra em inglês 3, Palavra em inglês 4}, Palavra 5.
 
@@ -216,56 +229,56 @@
 \end{resumo}
 
 
-%---------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Insere lista de ilustrações
-%---------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \begin{KeepFromToc} % Este comando evita que todas as seções dentro dele de apareçam no sumário
 \pdfbookmark[0]{\listfigurename}{lof}
 \listoffigures
 \cleardoublepage
 
 
-%---------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Insere lista de tabelas
-%---------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % \pdfbookmark[0]{\listtablename}{lot}
 % \listoftables
 % \cleardoublepage
 
-%---------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Insere lista de quadros
-%---------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % \pdfbookmark[0]{\listofquadrosname}{loq}
 % \listofquadros*
 % \cleardoublepage
 
-%---------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Ajusta lista de código - alterar de figures para códigos - by @Gabrielr2508
-%---------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % \makeatletter
 % \let\l@listing\l@figure
 % \def\newfloat@listoflisting@hook{\let\figurename\listingname}
 % \makeatother
 
-%---------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Insere lista de códigos - by @leolleocomp
-%---------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % \listoflistings
 
 \end{KeepFromToc}
 
-%---------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Insere lista de abreviaturas e siglas
-%---------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \begin{siglas}
   \item[LI]       Lorem Ipsum
-    \item[LII]		Lorem Ipsum Ipsum
+  \item[LII]		Lorem Ipsum Ipsum
 
 \end{siglas}
 
-%---------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % Insere o sumario
-%---------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents*
 \cleardoublepage
