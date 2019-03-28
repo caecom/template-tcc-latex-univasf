@@ -92,13 +92,13 @@
 \renewcommand{\backref}{}
 % Define os textos da citação
 \renewcommand*{\backrefalt}[4]{
-	\ifcase #1 %
-		%Nenhuma citação no texto.%
-	\or
-		Citado na página #2.%
-	\else
-		Citado #1 vezes nas páginas #2.%
-	\fi}%
+  \ifcase #1 %
+    %Nenhuma citação no texto.%
+  \or
+    Citado na página #2.%
+  \else
+    Citado #1 vezes nas páginas #2.%
+  \fi}%
 
 %-------------------------------------------------------------------------------
 % Configurações de aparência do PDF final
@@ -109,18 +109,18 @@
 % informações do PDF
 \makeatletter
 \hypersetup{
-     	%pagebackref=true,
-		pdftitle={\@title},
-		pdfauthor={\@author},
-    	pdfsubject={\imprimirpreambulo},
-	    pdfcreator={LaTeX with abnTeX2},
-		pdfkeywords={abnt}{latex}{abntex}{abntex2}{relatório técnico},
-		colorlinks=true,			% false: boxed links; true: colored links
-    	linkcolor=black,				% color of internal links
-    	citecolor=black,				% color of links to bibliography
-    	filecolor=black,			% color of file links
-		urlcolor=black,
-		bookmarksdepth=4
+       %pagebackref=true,
+    pdftitle={\@title},
+    pdfauthor={\@author},
+      pdfsubject={\imprimirpreambulo},
+      pdfcreator={LaTeX with abnTeX2},
+    pdfkeywords={abnt}{latex}{abntex}{abntex2}{relatório técnico},
+    colorlinks=true,			% false: boxed links; true: colored links
+      linkcolor=black,				% color of internal links
+      citecolor=black,				% color of links to bibliography
+      filecolor=black,			% color of file links
+    urlcolor=black,
+    bookmarksdepth=4
 }
 \makeatother
 % ---
@@ -146,13 +146,13 @@
 %-------------------------------------------------------------------------------
 \newcommand{\imagem}[4]
 {%			\imagem{x.x}{nomeimg}{titulo}{fonte}
-	\begin{figure}[!htb]
-		\caption{\label{img:#2}#3}
-		\begin{center}
-			\includegraphics[scale=#1]{img/#2}
-		\end{center}
+  \begin{figure}[!htb]
+    \caption{\label{img:#2}#3}
+    \begin{center}
+      \includegraphics[scale=#1]{img/#2}
+    \end{center}
         \legend{\textbf{Fonte:} #4}
-	\end{figure}
+  \end{figure}
 }%
 
 %-------------------------------------------------------------------------------
@@ -204,7 +204,7 @@
 }
 
 \newcommand{\Otherguydidthis}[1]{
-	\legend{\textbf{Fonte:} \citeonline{#1}.}
+  \legend{\textbf{Fonte:} \citeonline{#1}.}
 }
 
 %-------------------------------------------------------------------------------
@@ -212,11 +212,11 @@
 %-------------------------------------------------------------------------------
 \newcommand{\sourcecode}[4]{
 \begin{listing}[h]
-	\refstepcounter{sourcecode}
-	\caption{#1}
-	\label{cmd:#2}
-	\inputminted[linenos, bgcolor=bg, tabsize=4,breaklines]{#3}{codes/#4}
-	\Ididthis
+  \refstepcounter{sourcecode}
+  \caption{#1}
+  \label{cmd:#2}
+  \inputminted[linenos, bgcolor=bg, tabsize=4,breaklines]{#3}{codes/#4}
+  \Ididthis
 \end{listing}
 }
 
@@ -236,8 +236,8 @@
 \SetupFloatingEnvironment{listing}{name=Código}
 
 \newcommand{\sourcecodenolist}[4]{
-	\begin{code}
-	    \refstepcounter{sourcecode}
+  \begin{code}
+      \refstepcounter{sourcecode}
         \captionof{listing}{#1 }
         \label{code:#2}
         \inputminted[linenos, bgcolor=bg, tabsize=4,breaklines]{#3}{codes/#4}
@@ -246,7 +246,7 @@
 }
 
 \newcommand{\sourcecodeinline}[2]{
-	\mintinline[linenos, bgcolor=bg, tabsize=4,breaklines]{#1}{#2}
+  \mintinline[linenos, bgcolor=bg, tabsize=4,breaklines]{#1}{#2}
 }
 
 
