@@ -145,13 +145,13 @@
 % Comando para inserir imagens de forma simples
 %-------------------------------------------------------------------------------
 \newcommand{\imagem}[4]
-{%			\imagem{x.x}{nomeimg}{titulo}{fonte}
+{% \imagem{x.x}{nomeimg}{titulo}{fonte}
   \begin{figure}[!htb]
     \caption{\label{img:#2}#3}
     \begin{center}
       \includegraphics[scale=#1]{img/#2}
     \end{center}
-        \legend{\textbf{Fonte:} #4}
+        \legend{\textbf{Fonte:} #4.}
   \end{figure}
 }%
 
