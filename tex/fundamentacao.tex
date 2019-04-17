@@ -581,21 +581,17 @@ distâncias entre os pontos de exemplo e, por consequência, na classificação
 
 \subsubsection{Regressão logística}
 
-A Regressão Logística (RL) é uma generalização da regressão linear. É usada
-principalmente para prever variáveis dependentes binárias ou de múltiplas
+A Regressão Logística (RL) é uma generalização da regressão linear. É usada,
+principalmente, para prever variáveis dependentes binárias ou de múltiplas
 classes. Como a variável de resposta é discreta, ela não pode ser modelada
 diretamente por regressão linear. Portanto, em vez de prever uma estimativa de
 ponto do evento em si, o modelo baseia-se para prever a probabilidade de sua
 ocorrência \cite{csen2012predicting}.
 
-O modelos de RL surge do desejo de modelar as probabilidades posteriores de de
-\(K\) classes através de funções lineares em \(x\), ao mesmo tempo, garantir que
-a soma dessas probabilidades seja um e elas permaneçam no intervalo entre \(0\)
-e \(1\) \cite{james2013introduction}.
-
-\imagem{.5}{logistic_regression}{\label{logisticRegression}Previsões utilizando
-regressão logística. As probabilidades se encontram no intervalo entre 0 e
-1}{\citeonline{james2013introduction}}
+O modelo de RL surge do desejo de modelar as probabilidades posteriores de \(K\)
+classes através de funções lineares em \(x\), ao mesmo tempo, garantir que a
+soma dessas probabilidades seja um (1) e elas permaneçam no intervalo entre
+\(0\) e \(1\) \cite{james2013introduction}.
 
 Uma vantagem da RL no processo de classificação de uma variável dependente
 binária (binomial), é que, nela, pode ser usado um conjunto de variáveis
@@ -615,13 +611,17 @@ Os modelos de RL para diversas variáveis é descrito pela seguinte fórmula:
 = \beta_0 + \beta_1 X_{1,i} + \ldots + \beta_k X_{k,i}\]
 
 Onde, \(\beta_0\), \(\beta_1\), \ldots, \(\beta_k\) são os coeficientes das
-variáveis que explicam a ocorrência de determinado evento \(p_i\) é a
+variáveis que explicam a ocorrência de determinado evento e \(p_i\) é a
 probabilidade de um evento ocorrer dado o conjunto de variáveis \(i\).
 
-O resultado do modelo logit é uma curva em forma de S (Figura
+O resultado do modelo \textit{logit} é uma curva em forma de S (Figura
 \ref{logisticRegression}).  Para estimar um modelo de regressão logística, essa
-curva de valores previstos é ajustada aos dados reais, analogamente como é feito
-com uma relação linear em regressão múltipla.
+curva de valores previstos é ajustada aos dados reais, analogamente, como é
+feito com uma relação linear em regressão múltipla.
+
+\imagem{.5}{logistic_regression}{\label{logisticRegression}Previsões utilizando
+regressão logística. As probabilidades se encontram no intervalo entre 0 e
+1}{\citeonline{james2013introduction}}
 
 Em níveis muito baixos da variável independente, a probabilidade se aproxima de
 0\%, mas nunca alcança tal valor. Da mesma forma, quando o valor da variável
