@@ -540,16 +540,6 @@ seguiu-se uma longa linha de investigações, incluindo uma abordagem de rejeiç
 melhoramento em relação com a taxa de erro de Bayes , abordagem com pesos nas
 distâncias \cite{peterson2009knn}.
 
-\begin{figure}[!htb]
-  \centering
-  \caption{\label{knn} Os 1, 2 e 3 vizinhos mais próximos de um ponto dado}
-  \subcaptionbox{\label{knnA}1-vizinho mais próximo}{\includegraphics[scale=.75]{img/knn_example_a}}\qquad
-  \subcaptionbox{\label{knnB}2-vizinhos mais próximo}{\includegraphics[scale=.75]{img/knn_example_b}}\qquad
-  \subcaptionbox{\label{knnC}3-vizinhos mais próximo}{\includegraphics[scale=.75]{img/knn_example_c}}
-  \vspace{1.5em}
-  \Otherguydidthis{tan2009introduccao}
-\end{figure}
-
 Segundo \citeonline{tan2009introduccao} um classificador que utiliza KNN
 representa cada exemplo, de treinamento ou de teste, como um ponto de dado em um
 espaço \(d\)-dimensional, onde \(d\) é a quantidade de atributos. Dado um
@@ -568,6 +558,16 @@ tem classes distintas, portanto, podemos atribuir aleatoriamente qualquer uma
 das duas classes. Na Figura \ref{knnC}, com \(k = 3\), dois dos vizinhos mais
 próximos do ponto dado são da classe positivo e apenas um é da classe negativo,
 logo, atribuímos ao ponto dado a classe positivo.
+
+\begin{figure}[!htb]
+  \centering
+  \caption{\label{knn} Os 1, 2 e 3 vizinhos mais próximos de um ponto dado}
+  \subcaptionbox{\label{knnA}1-vizinho mais próximo}{\includegraphics[scale=.75]{img/knn_example_a}}\qquad
+  \subcaptionbox{\label{knnB}2-vizinhos mais próximo}{\includegraphics[scale=.75]{img/knn_example_b}}\qquad
+  \subcaptionbox{\label{knnC}3-vizinhos mais próximo}{\includegraphics[scale=.75]{img/knn_example_c}}
+  \vspace{1.5em}
+  \Otherguydidthis{tan2009introduccao}
+\end{figure}
 
 O desempenho de um classificador usando KNN pode ser melhorado quando os
 atributos são transformados antes da análise de classificação. A forma mais
