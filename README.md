@@ -167,8 +167,3 @@ Ou via comandos do VScode, pressionando,  `Ctrl + Shift + P`, e prcurando por `L
 O presente projeto é uma colaboração entre alunos da instituição de ensino Univasf.
 Ele tem como base o pacote [abntex2](https://github.com/abntex/abntex2).
 Sinta-se livre para copiar, colar, modificar, etc.
-
-# TODO
-- [x] adicionar exemplo de utilização usando o TexMaker;
-- [ ] adicionar documentação em inglês.
-
