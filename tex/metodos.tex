@@ -4,11 +4,17 @@
 \chapter{Materiais e Métodos} \label{ch:MM} %Uma label é como você referencia uma seção no texto com a tag \ref{}
 
 
-\section{Seção de exemplo 1} 
+\section{Base de dados} 
+Os dados utilizados para este trabalho consistem em 9414 coletas de MEG para treino, realizadas em 16 indivíduos diferentes, com a indicação de qual estimulo o indivíduo em questão foi exposto, face ou face embaralhada. E também 4058 coletas para teste, realizadas em 7 indivíduos, sem as respectivas classes de estimulo descriminadas. Cada sujeito tem aproximadamente entre 580 a 590 coletas disponíveis para ambos os grupos. 
+
+A coleta é constituída de 1.5 segundos de gravação do MEG, começando 0.5 segundos antes do estimulo começar. Para os dados de treino, inclui-se também a classe do respectivo estimulo, face (1) ou face embaralhada (0). Originalmente os dados foram coletados numa frequência de 1 Khz, contudo os dados disponibilizados foram sub-amostrados para frequência  de 250 hz e um filtro passa alta foi aplicado em 1hz para eliminar componentes contínuas (CC) que não compõe o sinal de interesse.
+
+Os procedimentos descritos anteriormente foram realizados com a biblioteca nme-python e os dados foram arranjados em uma matriz tridimensional que indexa Coleta x Canal x Tempo, com tamanho de  580 - 590 x 306 x 375. Para o conjunto de treino, esta matriz está associada a um vetor cuja dimensão é igual à primeira dimensão da matriz, no qual estão às \textit{labels} associadas.
+
+Os sensores utilizados foram espalhados como demonstrado na (Imagem), agrupados em grupos de três sensores por local, cobrindo 102 locais. Em cada local há dois gradiômetros ortogonais e um magnetômetro que fazem a gravação do campo magnético induzido pelas ondas cerebrais. Os gradiômetros medem a variação espacial do campo magnético, dando origem ao plano XY e o magnetômetro mede a componente radial Z do mesmo.   
 
 
-
-\subsection{Subseção de exemplo 1 - Referenciando seções} \label{subsec:subsec1}
+%\subsection{Subseção de exemplo 1 - Referenciando seções} \label{subsec:subsec1}
 
 
 
