@@ -1,0 +1,16 @@
+before_install:
+  - "sudo apt-get update && sudo apt-get install texlive-full"
+script:
+  - mkdir _build
+  - pdflatex -shell-escape -output-directory _build main.tex
+  - bibitex main.tex
+  - pdflatex -shell-escape -output-directory _build main.tex
+  - pdflatex -shell-escape -output-directory _build main.tex
+deploy:
+  provider: releases
+  file:
+    - _build/your_file_1.pdf
+    - _build/your_file_2.pdf
+  skip_cleanup: true
+  on:
+    tags: true
