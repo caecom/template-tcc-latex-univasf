@@ -163,7 +163,7 @@ Ao compilar escolha a receita `pdflatex -> bibtex -> pdflatex*2`
 
 Com isso é possível compilar a partir do arquivo `main.tex` utilizando o atalho `Ctrl + Alt + B`.
 
-Ou via comandos do VScode, pressionando, `Ctrl + Shift + P`, e prcurando por `LaTex Workshop: Build LaTex Project:`
+Ou via comandos do VScode, pressionando, `Ctrl + Shift + P`, e procurando por `LaTex Workshop: Build LaTex Project:`
 
 # Considerações
 
