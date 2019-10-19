@@ -4,6 +4,8 @@ Template em Latex para TCC do curso de Engenharia de Computação da Univasf.
 
 [Aqui](https://github.com/ruanmed/form-mat-tcc-cecomp) encontra-se o template em LaTeX para Formulário de Matrícula de TCC do curso de Engenharia de Computação.
 
+Você pode consultar exemplos de TCCs elaborados com esse template em [nossa biblioteca](https://github.com/caecom/lib-tccs).
+
 Dicas sobre como estruturar o documento e utilizar as características
 do template estão comentadas ao longo do código, bem como podem ser observadas
 no produto final, o [documento](https://github.com/Gabrielr2508/template-tcc-latex-univasf/blob/feature/documentation/main.pdf).
