@@ -74,7 +74,7 @@ A tabela \ref{tab:crossplatform} é um exemplo de como uma tabela pode ser const
 	\centering
 	\caption{\label{tab:crossplatform} Tipos de aplicações e abordagens preferenciais.}
 	\begin{adjustbox}{max width=\textwidth}
-		\begin{tabular}{@{} p{5cm} ccc @{}}
+		\begin{tabular}{@{} p{5cm} |c|c|c| @{}}
 		\toprule
 		\textbf{Código da Aplicação} & \textbf{Web} & \textbf{Híbrida} & \textbf{Interpretada / Compilação Cruzada} \\ \hline
 
@@ -108,5 +108,23 @@ Também é possível criar quadros, que são ligeiramente diferente de tabelas. 
 	\end{tabular}
 	\Ididthis
 \end{quadro}
+
+
+\begin{quadro}
+	\caption{\label{qua:cron}Cronograma}
+	\center
+	\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	\multicolumn{1}{|l|}{Atividade} & \multicolumn{1}{l|}{Set/19} & \multicolumn{1}{l|}{Out/19} & \multicolumn{1}{l|}{Nov/19} & \multicolumn{1}{l|}{Dez/19} & \multicolumn{1}{l|}{Jan/20} \\ \hline
+	1                               & x                           &                             &                             &                             &                             \\ \hline
+	2                               &                             & x                           &                             &                             &                             \\ \hline
+	3                               &                             & x                           &                             &                             &                             \\ \hline
+	4                               &                             &                             & x                           & x                           &                             \\ \hline
+	5                               &                             & x                           & x                           & x                           &                             \\ \hline
+	6                               &                             &                             &                             &                             & x                           \\ \hline
+	
+	\end{tabular}
+	\legend{\textbf{Fonte:} Elaborado pela autora (2019)}
+	\end{quadro}
 
 \section{Subseção de exemplo 4 - Seções}
